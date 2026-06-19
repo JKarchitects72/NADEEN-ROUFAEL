@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nadine Rouphael — Atelier Nadeen</title>
+  <meta name="description" content="Nadine Rouphael — distinguished interior designer and ceramic artist based in Beirut, Lebanon. Founder of Atelier Nadeen." />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#000000',
+            charcoal: '#111111',
+            mute: '#6b6b6b',
+            line: '#e7e7e7',
+            paper: '#ffffff',
+            mist: '#f7f7f7',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+          letterSpacing: {
+            brand: '0.32em',
+            wide2: '0.22em',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Inter typeface -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+    /* Ultra-smooth, slow opacity fades */
+    .fade { transition: opacity 700ms cubic-bezier(0.25, 0.1, 0.25, 1); }
+    .nav-link { transition: color 600ms cubic-bezier(0.25, 0.1, 0.25, 1), opacity 600ms ease; }
+    .nav-link:hover { opacity: 0.45; }
+
+    .img-fade { transition: opacity 900ms cubic-bezier(0.22, 0.61, 0.36, 1), filter 900ms ease; }
+    .img-wrap:hover .img-fade { opacity: 0.78; }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 1100ms cubic-bezier(0.22,0.61,0.36,1), transform 1100ms cubic-bezier(0.22,0.61,0.36,1); }
+    .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* Hide scrollbar on the paintings carousel */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Full-screen overlay menu */
+    .overlay { transition: opacity 600ms ease, visibility 600ms ease; }
+    .overlay.closed { opacity: 0; visibility: hidden; pointer-events: none; }
+    .overlay.open { opacity: 1; visibility: visible; pointer-events: auto; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body class="bg-paper text-charcoal font-sans antialiased selection:bg-black selection:text-white">
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header id="top" class="sticky top-0 z-50 bg-paper/90 backdrop-blur-sm border-b border-line">
+    <nav class="mx-auto max-w-[1500px] px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#top" class="nav-link text-ink text-xs md:text-sm font-light uppercase tracking-brand">
+        Nadine&nbsp;Rouphael
+      </a>
+
+      <!-- Desktop menu -->
+      <ul class="hidden md:flex items-center gap-9 lg:gap-12 text-[11px] uppercase tracking-wide2 font-light text-charcoal">
+        <li><a href="#ceramics"   class="nav-link">Ceramics</a></li>
+        <li><a href="#paintings"  class="nav-link">Paintings</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#news"       class="nav-link">News &amp; Exhibitions</a></li>
+        <li><a href="#press"      class="nav-link">Media &amp; Press</a></li>
+      </ul>
+
+      <!-- Hamburger -->
+      <button id="menuOpen" aria-label="Open menu" class="md:hidden flex flex-col gap-[6px] w-7 group">
+        <span class="block h-px w-7 bg-ink fade group-hover:opacity-50"></span>
+        <span class="block h-px w-7 bg-ink fade group-hover:opacity-50"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===================== FULL-SCREEN OVERLAY MENU ===================== -->
+  <div id="overlay" class="overlay closed fixed inset-0 z-[60] bg-paper flex flex-col">
+    <div class="flex items-center justify-between h-16 px-6 border-b border-line">
+      <span class="text-xs font-light uppercase tracking-brand">Atelier Nadeen</span>
+      <button id="menuClose" aria-label="Close menu" class="relative w-7 h-7">
+        <span class="absolute left-0 top-1/2 h-px w-7 bg-ink rotate-45"></span>
+        <span class="absolute left-0 top-1/2 h-px w-7 bg-ink -rotate-45"></span>
+      </button>
+    </div>
+    <ul class="flex-1 flex flex-col items-center justify-center gap-8 text-2xl font-light uppercase tracking-wide2 text-charcoal">
+      <li><a href="#ceramics"  class="nav-link overlay-link">Ceramics</a></li>
+      <li><a href="#paintings" class="nav-link overlay-link">Paintings</a></li>
+      <li><a href="#about"     class="nav-link overlay-link">About</a></li>
+      <li><a href="#news"      class="nav-link overlay-link">News &amp; Exhibitions</a></li>
+      <li><a href="#press"     class="nav-link overlay-link">Media &amp; Press</a></li>
+    </ul>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="mx-auto max-w-[1500px] px-6 md:px-10 pt-24 md:pt-40 pb-20 md:pb-32">
+    <div class="reveal max-w-4xl">
+      <p class="text-[11px] uppercase tracking-wide2 text-mute mb-8">Beirut, Lebanon — Atelier Nadeen</p>
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-extralight leading-[1.05] tracking-tight text-ink">
+        Interior design &amp; ceramic art, shaped by a lifelong devotion to material.
+      </h1>
+      <p class="mt-10 max-w-xl text-base md:text-lg font-light leading-relaxed text-mute">
+        The studio of Nadine Rouphael — where clay, paint, and considered space meet
+        in quiet, functional forms.
+      </p>
+      <div class="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-[11px] uppercase tracking-wide2 text-charcoal">
+        <a href="#ceramics"  class="nav-link border-b border-ink pb-1">View Ceramics</a>
+        <a href="#paintings" class="nav-link border-b border-line pb-1">View Paintings</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 1 · CERAMICS COLLECTION ===================== -->
+  <section id="ceramics" class="scroll-mt-24 mx-auto max-w-[1500px] px-6 md:px-10 py-16 md:py-28 border-t border-line">
+    <header class="reveal mb-12 md:mb-20 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <div>
+        <p class="text-[11px] uppercase tracking-wide2 text-mute mb-4">01 — Collection</p>
+        <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink">Ceramics</h2>
+      </div>
+      <p class="max-w-sm text-sm font-light leading-relaxed text-mute">
+        Functional aesthetics and structural clay forms — vessels, totems and quiet objects
+        built around balance and the honesty of stoneware.
+      </p>
+    </header>
+
+    <!-- Masonry via CSS columns -->
+    <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 md:gap-8 [column-fill:_balance]">
+      <!-- Each item -->
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=900&q=80"
+               alt="Sculptural stoneware vase" loading="lazy"
+               class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Sculptural Vase</span><span class="text-mute">Stoneware</span>
+        </figcaption>
+      </figure>
+
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=900&q=80"
+               alt="Glazed ceramic totem" loading="lazy"
+               class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Glazed Totem</span><span class="text-mute">Atelier Nadeen</span>
+        </figcaption>
+      </figure>
+
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=900&q=80"
+               alt="Matte bowl in earthen clay" loading="lazy"
+               class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Earthen Bowl</span><span class="text-mute">Matte Clay</span>
+        </figcaption>
+      </figure>
+
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=900&q=80"
+               alt="Pair of hand-thrown vessels" loading="lazy"
+               class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Paired Vessels</span><span class="text-mute">Hand-Thrown</span>
+        </figcaption>
+      </figure>
+
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?auto=format&fit=crop&w=900&q=80"
+               alt="Tall ribbed ceramic form" loading="lazy"
+               class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Ribbed Column</span><span class="text-mute">Reduction Fired</span>
+        </figcaption>
+      </figure>
+
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="https://images.unsplash.com/photo-1554188248-986adbb73be4?auto=format&fit=crop&w=900&q=80"
+               alt="Minimal white porcelain cups" loading="lazy"
+               class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Quiet Series</span><span class="text-mute">Porcelain</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== 2 · PAINTINGS COLLECTION ===================== -->
+  <section id="paintings" class="scroll-mt-24 bg-mist border-t border-line">
+    <div class="mx-auto max-w-[1500px] px-6 md:px-10 py-16 md:py-28">
+      <header class="reveal mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <div>
+          <p class="text-[11px] uppercase tracking-wide2 text-mute mb-4">02 — Collection</p>
+          <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink">Paintings</h2>
+        </div>
+        <p class="max-w-sm text-sm font-light leading-relaxed text-mute">
+          A deep-rooted passion for paint — explorations of colour, texture and abstract
+          composition on canvas. Drag or scroll horizontally.
+        </p>
+      </header>
+
+      <!-- Horizontal scroll carousel -->
+      <div id="carousel" class="no-scrollbar flex gap-6 md:gap-8 overflow-x-auto pb-4 snap-x snap-mandatory cursor-grab">
+        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+          <div class="overflow-hidden bg-paper">
+            <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?auto=format&fit=crop&w=1000&q=80"
+                 alt="Abstract painting in warm tones" loading="lazy"
+                 class="img-fade w-full h-[58vh] object-cover" />
+          </div>
+          <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+            <span>Untitled I</span><span class="text-mute">Acrylic on Canvas</span>
+          </figcaption>
+        </figure>
+
+        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+          <div class="overflow-hidden bg-paper">
+            <img src="https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?auto=format&fit=crop&w=1000&q=80"
+                 alt="Textured abstract composition" loading="lazy"
+                 class="img-fade w-full h-[58vh] object-cover" />
+          </div>
+          <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+            <span>Field Study</span><span class="text-mute">Mixed Media</span>
+          </figcaption>
+        </figure>
+
+        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+          <div class="overflow-hidden bg-paper">
+            <img src="https://images.unsplash.com/photo-1531913764164-f85c52e6e654?auto=format&fit=crop&w=1000&q=80"
+                 alt="Gestural abstract painting" loading="lazy"
+                 class="img-fade w-full h-[58vh] object-cover" />
+          </div>
+          <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+            <span>Movement</span><span class="text-mute">Oil on Linen</span>
+          </figcaption>
+        </figure>
+
+        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+          <div class="overflow-hidden bg-paper">
+            <img src="https://images.unsplash.com/photo-1502759683299-cdcd6974244f?auto=format&fit=crop&w=1000&q=80"
+                 alt="Soft tonal abstract artwork" loading="lazy"
+                 class="img-fade w-full h-[58vh] object-cover" />
+          </div>
+          <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+            <span>Tonal No. 4</span><span class="text-mute">Pigment &amp; Wax</span>
+          </figcaption>
+        </figure>
+
+        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+          <div class="overflow-hidden bg-paper">
+            <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=1000&q=80"
+                 alt="Bold colour-field painting" loading="lazy"
+                 class="img-fade w-full h-[58vh] object-cover" />
+          </div>
+          <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+            <span>Colour Field</span><span class="text-mute">Acrylic on Canvas</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3 · ABOUT THE ARTIST ===================== -->
+  <section id="about" class="scroll-mt-24 mx-auto max-w-[1500px] px-6 md:px-10 py-20 md:py-36 border-t border-line">
+    <p class="reveal text-[11px] uppercase tracking-wide2 text-mute mb-12 md:mb-20">03 — About the Artist</p>
+    <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+      <!-- Portrait -->
+      <figure class="reveal img-wrap group order-1 md:order-none">
+        <div class="overflow-hidden bg-mist">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
+               alt="Portrait of Nadine Rouphael" loading="lazy"
+               class="img-fade w-full object-cover aspect-[4/5]" />
+        </div>
+        <figcaption class="mt-3 text-[11px] uppercase tracking-wide2 text-mute">Nadine Rouphael — Founder, Atelier Nadeen</figcaption>
+      </figure>
+
+      <!-- Narrow narrative column -->
+      <div class="reveal max-w-md">
+        <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink mb-8">Nadine Rouphael</h2>
+        <p class="text-base md:text-lg font-light leading-relaxed text-charcoal">
+          Nadine Rouphael is a distinguished interior designer and artist based in Beirut, Lebanon.
+          As the founder of Atelier Nadeen, she has carved a niche for herself in the realms of both
+          interior design and ceramic art. Her creative journey began with a deep-rooted passion for
+          art, which she completes through her work with paint and ceramics. With extensive experience
+          working alongside European designers in the furniture industry, Nadine developed a profound
+          interest in ceramic art. This newfound passion allowed her to explore and present unique
+          perspectives, offering fresh and innovative angles on design. Her work is a testament to her
+          ability to blend artistic expression with functional aesthetics.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4 · NEWS & EXHIBITIONS ===================== -->
+  <section id="news" class="scroll-mt-24 bg-mist border-t border-line">
+    <div class="mx-auto max-w-[1500px] px-6 md:px-10 py-16 md:py-28">
+      <header class="reveal mb-12 md:mb-20">
+        <p class="text-[11px] uppercase tracking-wide2 text-mute mb-4">04 — News &amp; Exhibitions</p>
+        <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink">Selected Showcases</h2>
+      </header>
+
+      <ul class="max-w-4xl">
+        <li class="reveal group border-t border-line py-7 md:py-9 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-10 fade hover:opacity-60">
+          <span class="text-[11px] uppercase tracking-wide2 text-mute sm:w-40 shrink-0">Exhibition / Showcase</span>
+          <span class="text-2xl md:text-3xl font-extralight tracking-tight text-ink">WEdesign Beirut</span>
+        </li>
+        <li class="reveal group border-t border-line py-7 md:py-9 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-10 fade hover:opacity-60">
+          <span class="text-[11px] uppercase tracking-wide2 text-mute sm:w-40 shrink-0">Exhibition Showcase</span>
+          <span class="text-2xl md:text-3xl font-extralight tracking-tight text-ink">Menart Fair — Belgium</span>
+        </li>
+        <li class="reveal group border-t border-b border-line py-7 md:py-9 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-10 fade hover:opacity-60">
+          <span class="text-[11px] uppercase tracking-wide2 text-mute sm:w-40 shrink-0">Exhibition Showcase</span>
+          <span class="text-2xl md:text-3xl font-extralight tracking-tight text-ink">Art of Living — Abu Dhabi</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== 5 · MEDIA & PRESS ===================== -->
+  <section id="press" class="scroll-mt-24 mx-auto max-w-[1500px] px-6 md:px-10 py-20 md:py-36 border-t border-line">
+    <header class="reveal mb-12 md:mb-20">
+      <p class="text-[11px] uppercase tracking-wide2 text-mute mb-4">05 — Media &amp; Press</p>
+      <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink">In Print</h2>
+    </header>
+
+    <div class="grid md:grid-cols-2 gap-12 md:gap-20 max-w-5xl">
+      <figure class="reveal">
+        <blockquote class="text-xl md:text-2xl font-extralight leading-relaxed text-charcoal">
+          “Recognized by AD Magazine as one of the most remarkable ceramists of our time,
+          acknowledging her significant contributions to the field.”
+        </blockquote>
+        <figcaption class="mt-6 text-[11px] uppercase tracking-wide2 text-mute">
+          AD Middle East — Featured Profile
+        </figcaption>
+      </figure>
+
+      <figure class="reveal md:border-l md:border-line md:pl-20 flex flex-col justify-center">
+        <p class="text-xl md:text-2xl font-extralight leading-relaxed text-charcoal">
+          An editorial feature exploring the materials, process and quiet philosophy behind
+          Atelier Nadeen.
+        </p>
+        <figcaption class="mt-6 text-[11px] uppercase tracking-wide2 text-mute">
+          Interior Design Magazine — Editorial Feature
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="border-t border-line bg-paper">
+    <div class="mx-auto max-w-[1500px] px-6 md:px-10 py-14 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+      <div>
+        <p class="text-xs font-light uppercase tracking-brand text-ink mb-3">Atelier Nadeen</p>
+        <p class="text-sm font-light text-mute">Beirut, Lebanon</p>
+      </div>
+      <ul class="flex flex-wrap gap-x-8 gap-y-2 text-[11px] uppercase tracking-wide2 text-charcoal">
+        <li><a href="#ceramics"  class="nav-link">Ceramics</a></li>
+        <li><a href="#paintings" class="nav-link">Paintings</a></li>
+        <li><a href="#about"     class="nav-link">About</a></li>
+        <li><a href="#news"      class="nav-link">News</a></li>
+        <li><a href="#press"     class="nav-link">Press</a></li>
+      </ul>
+      <p class="text-[11px] uppercase tracking-wide2 text-mute">© <span id="year"></span> Nadine Rouphael</p>
+    </div>
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // --- Year ---
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // --- Mobile overlay menu ---
+      const overlay = document.getElementById('overlay');
+      const open = document.getElementById('menuOpen');
+      const close = document.getElementById('menuClose');
+
+      const setMenu = (isOpen) => {
+        overlay.classList.toggle('open', isOpen);
+        overlay.classList.toggle('closed', !isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      };
+
+      open.addEventListener('click', () => setMenu(true));
+      close.addEventListener('click', () => setMenu(false));
+      document.querySelectorAll('.overlay-link').forEach((l) =>
+        l.addEventListener('click', () => setMenu(false))
+      );
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setMenu(false);
+      });
+
+      // --- Reveal on scroll ---
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+      );
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+      // --- Drag-to-scroll for paintings carousel ---
+      const car = document.getElementById('carousel');
+      let down = false, startX = 0, startScroll = 0;
+
+      car.addEventListener('pointerdown', (e) => {
+        down = true;
+        startX = e.clientX;
+        startScroll = car.scrollLeft;
+        car.style.cursor = 'grabbing';
+      });
+      const end = () => { down = false; car.style.cursor = 'grab'; };
+      car.addEventListener('pointerup', end);
+      car.addEventListener('pointerleave', end);
+      car.addEventListener('pointermove', (e) => {
+        if (!down) return;
+        car.scrollLeft = startScroll - (e.clientX - startX);
+      });
+    })();
+  </script>
+</body>
+</html>
