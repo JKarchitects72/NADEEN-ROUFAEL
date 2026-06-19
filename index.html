@@ -3,78 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nadine Rouphael — Atelier Nadeen</title>
-  <meta name="description" content="Nadine Rouphael — distinguished interior designer and ceramic artist based in Beirut, Lebanon. Founder of Atelier Nadeen." />
+  <title>Nadeen Rouphael — Atelier Nadeen</title>
+  <meta name="description" content="Nadeen Rouphael — distinguished interior designer and ceramic artist based in Beirut, Lebanon. Founder of Atelier Nadeen." />
   <link rel="icon" href="website%20logo.jpeg" />
-
-  <!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink: '#000000', charcoal: '#111111', mute: '#6b6b6b',
-            line: '#e7e7e7', paper: '#ffffff', mist: '#f7f7f7',
-          },
-          fontFamily: { sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'] },
-          letterSpacing: { brand: '0.32em', wide2: '0.22em' },
-        },
-      },
-    };
+    tailwind.config = { theme: { extend: {
+      colors: { ink:'#000000', charcoal:'#111111', mute:'#6b6b6b', line:'#e7e7e7', paper:'#ffffff', mist:'#f7f7f7' },
+      fontFamily: { sans: ['Inter','Helvetica Neue','Arial','sans-serif'] },
+      letterSpacing: { brand:'0.32em', wide2:'0.22em' },
+    } } };
   </script>
-
-  <!-- Inter typeface -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet" />
-
   <style>
     html { scroll-behavior: smooth; }
     body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-
-    .fade { transition: opacity 700ms cubic-bezier(0.25, 0.1, 0.25, 1); }
-    .nav-link { transition: color 600ms cubic-bezier(0.25, 0.1, 0.25, 1), opacity 600ms ease; }
+    .fade { transition: opacity 700ms cubic-bezier(0.25,0.1,0.25,1); }
+    .nav-link { transition: color 600ms cubic-bezier(0.25,0.1,0.25,1), opacity 600ms ease; }
     .nav-link:hover { opacity: 0.45; }
-
-    .img-fade { transition: opacity 900ms cubic-bezier(0.22, 0.61, 0.36, 1), filter 900ms ease; }
-    .img-wrap:hover .img-fade { opacity: 0.78; }
-
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 1100ms cubic-bezier(0.22,0.61,0.36,1), transform 1100ms cubic-bezier(0.22,0.61,0.36,1); }
-    .reveal.is-visible { opacity: 1; transform: none; }
-
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
+    .img-fade { transition: opacity 900ms cubic-bezier(0.22,0.61,0.36,1), filter 900ms ease; }
+    .img-wrap:hover .img-fade { opacity: 0.85; }
+    .reveal { opacity:0; transform: translateY(18px); transition: opacity 1100ms cubic-bezier(0.22,0.61,0.36,1), transform 1100ms cubic-bezier(0.22,0.61,0.36,1); }
+    .reveal.is-visible { opacity:1; transform:none; }
+    .no-scrollbar::-webkit-scrollbar { display:none; }
+    .no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
     .overlay { transition: opacity 600ms ease, visibility 600ms ease; }
-    .overlay.closed { opacity: 0; visibility: hidden; pointer-events: none; }
-    .overlay.open { opacity: 1; visibility: visible; pointer-events: auto; }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
-      html { scroll-behavior: auto; }
-    }
+    .overlay.closed { opacity:0; visibility:hidden; pointer-events:none; }
+    .overlay.open { opacity:1; visibility:visible; pointer-events:auto; }
+    .lb { transition: opacity 500ms ease, visibility 500ms ease; }
+    .lb.closed { opacity:0; visibility:hidden; pointer-events:none; }
+    .lb.open { opacity:1; visibility:visible; pointer-events:auto; }
+    .lb-img { transition: opacity 450ms ease; }
+    @media (prefers-reduced-motion: reduce) { .reveal{opacity:1;transform:none;transition:none;} html{scroll-behavior:auto;} }
   </style>
 </head>
-
 <body class="bg-paper text-charcoal font-sans antialiased selection:bg-black selection:text-white">
 
-  <!-- ===================== NAVIGATION ===================== -->
   <header id="top" class="sticky top-0 z-50 bg-paper/90 backdrop-blur-sm border-b border-line">
     <nav class="mx-auto max-w-[1500px] px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
       <a href="#top" class="nav-link flex items-center gap-3 text-ink">
         <img src="website%20logo.jpeg" alt="Atelier Nadeen mark" class="h-7 w-7 md:h-8 md:w-8 object-contain" />
-        <span class="text-xs md:text-sm font-light uppercase tracking-brand">Nadine&nbsp;Rouphael</span>
+        <span class="text-xs md:text-sm font-light uppercase tracking-brand">Nadeen&nbsp;Rouphael</span>
       </a>
-
       <ul class="hidden md:flex items-center gap-9 lg:gap-12 text-[11px] uppercase tracking-wide2 font-light text-charcoal">
-        <li><a href="#ceramics"   class="nav-link">Ceramics</a></li>
-        <li><a href="#paintings"  class="nav-link">Paintings</a></li>
-        <li><a href="#about"      class="nav-link">About</a></li>
-        <li><a href="#news"       class="nav-link">News &amp; Exhibitions</a></li>
-        <li><a href="#press"      class="nav-link">Media &amp; Press</a></li>
+        <li><a href="#ceramics"  class="nav-link">Ceramics</a></li>
+        <li><a href="#paintings" class="nav-link">Paintings</a></li>
+        <li><a href="#about"     class="nav-link">About</a></li>
+        <li><a href="#news"      class="nav-link">News &amp; Exhibitions</a></li>
+        <li><a href="#press"     class="nav-link">Media &amp; Press</a></li>
       </ul>
-
       <button id="menuOpen" aria-label="Open menu" class="md:hidden flex flex-col gap-[6px] w-7 group">
         <span class="block h-px w-7 bg-ink fade group-hover:opacity-50"></span>
         <span class="block h-px w-7 bg-ink fade group-hover:opacity-50"></span>
@@ -82,7 +61,6 @@
     </nav>
   </header>
 
-  <!-- ===================== FULL-SCREEN OVERLAY MENU ===================== -->
   <div id="overlay" class="overlay closed fixed inset-0 z-[60] bg-paper flex flex-col">
     <div class="flex items-center justify-between h-16 px-6 border-b border-line">
       <span class="text-xs font-light uppercase tracking-brand">Atelier Nadeen</span>
@@ -100,7 +78,6 @@
     </ul>
   </div>
 
-  <!-- ===================== HERO ===================== -->
   <section class="mx-auto max-w-[1500px] px-6 md:px-10 pt-20 md:pt-32 pb-16 md:pb-24">
     <div class="reveal max-w-4xl">
       <p class="text-[11px] uppercase tracking-wide2 text-mute mb-8">Beirut, Lebanon — Atelier Nadeen</p>
@@ -108,8 +85,7 @@
         Interior design &amp; ceramic art, shaped by a lifelong devotion to material.
       </h1>
       <p class="mt-10 max-w-xl text-base md:text-lg font-light leading-relaxed text-mute">
-        The studio of Nadine Rouphael — where clay, paint, and considered space meet
-        in quiet, functional forms.
+        The studio of Nadeen Rouphael — where clay, paint, and considered space meet in quiet, functional forms.
       </p>
       <div class="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-[11px] uppercase tracking-wide2 text-charcoal">
         <a href="#ceramics"  class="nav-link border-b border-ink pb-1">View Ceramics</a>
@@ -118,15 +94,14 @@
     </div>
   </section>
 
-  <!-- Hero image band -->
-  <section class="reveal img-wrap group mx-auto max-w-[1500px] px-6 md:px-10 mb-4 md:mb-10">
+  <section data-gallery="mebuki" role="button" tabindex="0" aria-label="Open Mebuki Garden gallery"
+           class="reveal img-wrap group cursor-pointer mx-auto max-w-[1500px] px-6 md:px-10 mb-4 md:mb-10">
     <div class="overflow-hidden bg-mist">
-      <img src="MEBUKI%20GARDEN%20%281%29.webp" alt="Mebuki Garden ceramic series by Nadine Rouphael"
+      <img src="MEBUKI%20GARDEN%20%281%29.webp" alt="Mebuki Garden ceramic series by Nadeen Rouphael"
            loading="lazy" class="img-fade w-full h-[44vh] md:h-[68vh] object-cover" />
     </div>
   </section>
 
-  <!-- ===================== 1 · CERAMICS COLLECTION ===================== -->
   <section id="ceramics" class="scroll-mt-24 mx-auto max-w-[1500px] px-6 md:px-10 py-16 md:py-28 border-t border-line">
     <header class="reveal mb-12 md:mb-20 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
       <div>
@@ -134,208 +109,290 @@
         <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink">Ceramics</h2>
       </div>
       <p class="max-w-sm text-sm font-light leading-relaxed text-mute">
-        Functional aesthetics and structural clay forms — vessels, figures, mirrors and
-        sculptural totems, each series an exploration of colour, balance and the honesty of clay.
+        Functional aesthetics and structural clay forms — vessels, figures, mirrors and sculptural totems.
+        Select any work to open its full gallery.
       </p>
     </header>
-
     <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 md:gap-8 [column-fill:_balance]">
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="mebuki" tabindex="0" role="button" aria-label="Open Mebuki Garden gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="MEBUKI%20GARDEN%20%281%29.webp" alt="Mebuki Garden — Glazed Stoneware" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Mebuki Garden</span><span class="text-mute">Glazed Stoneware</span>
+          <span>Mebuki Garden</span><span class="text-mute">26 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="table" tabindex="0" role="button" aria-label="Open Art de la Table gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="ART%20DE%20LA%20TABLE%20%281%29.webp" alt="Art de la Table — Porcelain" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Art de la Table</span><span class="text-mute">Porcelain</span>
+          <span>Art de la Table</span><span class="text-mute">22 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="roller" tabindex="0" role="button" aria-label="Open Rollercoaster gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="rollercoaster%20%281%29.webp" alt="Rollercoaster — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Rollercoaster</span><span class="text-mute">Glazed Ceramic</span>
+          <span>Rollercoaster</span><span class="text-mute">24 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="blue" tabindex="0" role="button" aria-label="Open Blue gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="BLUE.webp" alt="Blue — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
           <span>Blue</span><span class="text-mute">Glazed Ceramic</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="bonhomme" tabindex="0" role="button" aria-label="Open Bonhomme gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="bonhomme%20%281%29.webp" alt="Bonhomme — Ceramic Figure" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Bonhomme</span><span class="text-mute">Ceramic Figure</span>
+          <span>Bonhomme</span><span class="text-mute">75 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="spectrum" tabindex="0" role="button" aria-label="Open Spectrum gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="SPECTRUM%20%281%29.webp" alt="Spectrum — Glazed Stoneware" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Spectrum</span><span class="text-mute">Glazed Stoneware</span>
+          <span>Spectrum</span><span class="text-mute">2 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="orange" tabindex="0" role="button" aria-label="Open Orange gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="ORANGE.webp" alt="Orange — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
           <span>Orange</span><span class="text-mute">Glazed Ceramic</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
-          <img src="Collection%200/mulholland%20drive%203.jpg" alt="Mulholland Drive — Black Stoneware" loading="lazy" class="img-fade w-full object-cover" />
+      <figure data-gallery="mulholland" tabindex="0" role="button" aria-label="Open Mulholland Drive gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
+          <img src="Collection%200/mulholland%20drive%201.jpg" alt="Mulholland Drive — Black Stoneware" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Mulholland Drive</span><span class="text-mute">Black Stoneware</span>
+          <span>Mulholland Drive</span><span class="text-mute">10 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="yellow" tabindex="0" role="button" aria-label="Open Yellow gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="YELLOW.webp" alt="Yellow — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
           <span>Yellow</span><span class="text-mute">Glazed Ceramic</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="mirror" tabindex="0" role="button" aria-label="Open Mirror gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="MIRROR%20%281%29.webp" alt="Mirror — Ceramic & Glass" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Mirror</span><span class="text-mute">Ceramic & Glass</span>
+          <span>Mirror</span><span class="text-mute">9 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
-          <img src="Collection%200/ant.jpg" alt="Ant — Mixed Media" loading="lazy" class="img-fade w-full object-cover" />
+      <figure data-gallery="ant" tabindex="0" role="button" aria-label="Open Ant gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
+          <img src="Collection%200/ant%201.jpg" alt="Ant — Mixed Media" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Ant</span><span class="text-mute">Mixed Media</span>
+          <span>Ant</span><span class="text-mute">11 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="serene" tabindex="0" role="button" aria-label="Open Serene gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="SERENE%20%281%29.webp" alt="Serene — Stoneware" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Serene</span><span class="text-mute">Stoneware</span>
+          <span>Serene</span><span class="text-mute">8 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
-          <img src="Collection%202/image00005.jpg" alt="Figure — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+      <figure data-gallery="figures" tabindex="0" role="button" aria-label="Open Figures gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
+          <img src="Collection%202/image00001.jpg" alt="Figures — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Figure</span><span class="text-mute">Glazed Ceramic</span>
+          <span>Figures</span><span class="text-mute">41 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="shelf" tabindex="0" role="button" aria-label="Open Shelf gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="SHELF%20%281%29.webp" alt="Shelf — Porcelain" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Shelf</span><span class="text-mute">Porcelain</span>
+          <span>Shelf</span><span class="text-mute">3 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
-          <img src="Collection%200/hill%20bun%204.jpg" alt="Hill Bun — Textured Stoneware" loading="lazy" class="img-fade w-full object-cover" />
+      <figure data-gallery="hillbun" tabindex="0" role="button" aria-label="Open Hill Bun gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
+          <img src="Collection%200/hill%20bun%201.jpg" alt="Hill Bun — Textured Stoneware" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Hill Bun</span><span class="text-mute">Textured Stoneware</span>
+          <span>Hill Bun</span><span class="text-mute">9 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="sapience" tabindex="0" role="button" aria-label="Open Sapience Serene gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="SAPIENCE%20SERENCE%20%281%29.webp" alt="Sapience Serene — Sculptural Form" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Sapience Serene</span><span class="text-mute">Sculptural Form</span>
+          <span>Sapience Serene</span><span class="text-mute">17 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="tea" tabindex="0" role="button" aria-label="Open Tea Service gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="Collection%204/PHOTO-2021-03-04-15-36-35.jpg" alt="Tea Service — Porcelain" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Tea Service</span><span class="text-mute">Porcelain</span>
+          <span>Tea Service</span><span class="text-mute">9 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="mirror2" tabindex="0" role="button" aria-label="Open Mirror II gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="MIRROR%202%20%281%29.webp" alt="Mirror II — Ceramic & Glass" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Mirror II</span><span class="text-mute">Ceramic & Glass</span>
+          <span>Mirror II</span><span class="text-mute">8 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="arci" tabindex="0" role="button" aria-label="Open Arci gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="Collection%200/arci%201.jpg" alt="Arci — Stoneware" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Arci</span><span class="text-mute">Stoneware</span>
+          <span>Arci</span><span class="text-mute">6 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="cups" tabindex="0" role="button" aria-label="Open Cups gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="cup%20%281%29.webp" alt="Cups — Porcelain" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Cups</span><span class="text-mute">Porcelain</span>
+          <span>Cups</span><span class="text-mute">6 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="remains" tabindex="0" role="button" aria-label="Open What Remains, What Is gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="WHAT%20REMAINS%20WHAT%20IS%20%281%29.webp" alt="What Remains, What Is — Installation" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>What Remains, What Is</span><span class="text-mute">Installation</span>
+          <span>What Remains, What Is</span><span class="text-mute">11 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
-          <img src="Collection%202/image00013.jpg" alt="Coral Garden — Porcelain" loading="lazy" class="img-fade w-full object-cover" />
-        </div>
-        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Coral Garden</span><span class="text-mute">Porcelain</span>
-        </figcaption>
-      </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="media" tabindex="0" role="button" aria-label="Open Media gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="Collection%200/media1.jpg" alt="Media — Patterned Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Media</span><span class="text-mute">Patterned Ceramic</span>
+          <span>Media</span><span class="text-mute">4 photos</span>
         </figcaption>
       </figure>
-      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
-        <div class="overflow-hidden bg-mist">
+      <figure data-gallery="wall" tabindex="0" role="button" aria-label="Open Wall Lighting Fixture gallery"
+               class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group cursor-pointer outline-none">
+        <div class="relative overflow-hidden bg-mist">
           <img src="WALL%20LIGHTING%20FIXTURE%20%281%29.webp" alt="Wall Lighting Fixture — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+          <span class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 fade">
+            <span class="text-[10px] uppercase tracking-wide2 text-ink bg-paper/80 px-3 py-2">View Gallery</span>
+          </span>
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Wall Lighting Fixture</span><span class="text-mute">Glazed Ceramic</span>
+          <span>Wall Lighting Fixture</span><span class="text-mute">40 photos</span>
         </figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- ===================== 2 · PAINTINGS COLLECTION ===================== -->
   <section id="paintings" class="scroll-mt-24 bg-mist border-t border-line">
     <div class="mx-auto max-w-[1500px] px-6 md:px-10 py-16 md:py-28">
       <header class="reveal mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
@@ -344,13 +401,13 @@
           <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink">Paintings</h2>
         </div>
         <p class="max-w-sm text-sm font-light leading-relaxed text-mute">
-          A deep-rooted passion for paint — figures, gardens and abstract fields exploring
-          colour, texture and gesture on canvas. Drag or scroll horizontally.
+          A deep-rooted passion for paint — figures, gardens and abstract fields on canvas.
+          Drag to browse; select a work to enlarge.
         </p>
       </header>
-
       <div id="carousel" class="no-scrollbar flex gap-6 md:gap-8 overflow-x-auto pb-4 snap-x snap-mandatory cursor-grab">
-        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+        <figure data-gallery="paintings" data-index="0" tabindex="0" role="button" aria-label="Open Untitled — Figure"
+                 class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group cursor-pointer outline-none">
           <div class="overflow-hidden bg-paper">
             <img src="Collection%201/Painting/image00001.jpg" alt="Untitled — Figure — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
@@ -358,7 +415,8 @@
             <span>Untitled — Figure</span><span class="text-mute">Acrylic on Canvas</span>
           </figcaption>
         </figure>
-        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+        <figure data-gallery="paintings" data-index="1" tabindex="0" role="button" aria-label="Open Untitled — Procession"
+                 class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group cursor-pointer outline-none">
           <div class="overflow-hidden bg-paper">
             <img src="Collection%201/Painting/image00019.jpg" alt="Untitled — Procession — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
@@ -366,7 +424,8 @@
             <span>Untitled — Procession</span><span class="text-mute">Acrylic on Canvas</span>
           </figcaption>
         </figure>
-        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+        <figure data-gallery="paintings" data-index="2" tabindex="0" role="button" aria-label="Open Untitled — Blossom"
+                 class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group cursor-pointer outline-none">
           <div class="overflow-hidden bg-paper">
             <img src="Collection%201/Painting/image00002.jpg" alt="Untitled — Blossom — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
@@ -374,7 +433,8 @@
             <span>Untitled — Blossom</span><span class="text-mute">Acrylic on Canvas</span>
           </figcaption>
         </figure>
-        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+        <figure data-gallery="paintings" data-index="3" tabindex="0" role="button" aria-label="Open Untitled — The Cloak"
+                 class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group cursor-pointer outline-none">
           <div class="overflow-hidden bg-paper">
             <img src="Collection%201/Painting/image00017.jpg" alt="Untitled — The Cloak — Mixed Media" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
@@ -382,7 +442,8 @@
             <span>Untitled — The Cloak</span><span class="text-mute">Mixed Media</span>
           </figcaption>
         </figure>
-        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+        <figure data-gallery="paintings" data-index="4" tabindex="0" role="button" aria-label="Open Untitled — Field"
+                 class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group cursor-pointer outline-none">
           <div class="overflow-hidden bg-paper">
             <img src="Collection%201/Painting/image00008.jpg" alt="Untitled — Field — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
@@ -390,7 +451,8 @@
             <span>Untitled — Field</span><span class="text-mute">Acrylic on Canvas</span>
           </figcaption>
         </figure>
-        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+        <figure data-gallery="paintings" data-index="5" tabindex="0" role="button" aria-label="Open Untitled — Tree"
+                 class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group cursor-pointer outline-none">
           <div class="overflow-hidden bg-paper">
             <img src="Collection%201/Painting/image00037.jpg" alt="Untitled — Tree — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
@@ -398,7 +460,8 @@
             <span>Untitled — Tree</span><span class="text-mute">Acrylic on Canvas</span>
           </figcaption>
         </figure>
-        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+        <figure data-gallery="paintings" data-index="6" tabindex="0" role="button" aria-label="Open Untitled — Figures"
+                 class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group cursor-pointer outline-none">
           <div class="overflow-hidden bg-paper">
             <img src="Collection%201/Painting/image00036.jpg" alt="Untitled — Figures — Diptych" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
@@ -406,7 +469,8 @@
             <span>Untitled — Figures</span><span class="text-mute">Diptych</span>
           </figcaption>
         </figure>
-        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+        <figure data-gallery="paintings" data-index="7" tabindex="0" role="button" aria-label="Open Untitled"
+                 class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group cursor-pointer outline-none">
           <div class="overflow-hidden bg-paper">
             <img src="Collection%201/Painting/image00021.jpg" alt="Untitled — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
@@ -414,7 +478,8 @@
             <span>Untitled</span><span class="text-mute">Acrylic on Canvas</span>
           </figcaption>
         </figure>
-        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+        <figure data-gallery="paintings" data-index="8" tabindex="0" role="button" aria-label="Open Untitled — Branches"
+                 class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group cursor-pointer outline-none">
           <div class="overflow-hidden bg-paper">
             <img src="Collection%201/Painting/image00040.jpg" alt="Untitled — Branches — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
@@ -426,26 +491,24 @@
     </div>
   </section>
 
-  <!-- ===================== 3 · ABOUT THE ARTIST ===================== -->
   <section id="about" class="scroll-mt-24 mx-auto max-w-[1500px] px-6 md:px-10 py-20 md:py-36 border-t border-line">
     <p class="reveal text-[11px] uppercase tracking-wide2 text-mute mb-12 md:mb-20">03 — About the Artist</p>
     <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
       <figure class="reveal img-wrap group order-1 md:order-none">
         <div class="overflow-hidden bg-mist">
-          <img src="nadine-portrait.jpg" alt="Portrait of Nadine Rouphael, founder of Atelier Nadeen"
+          <img src="nadine-portrait.JPG" alt="Portrait of Nadeen Rouphael, founder of Atelier Nadeen"
                loading="lazy" class="img-fade w-full object-cover aspect-[4/5]" />
         </div>
-        <figcaption class="mt-3 text-[11px] uppercase tracking-wide2 text-mute">Nadine Rouphael — Founder, Atelier Nadeen</figcaption>
+        <figcaption class="mt-3 text-[11px] uppercase tracking-wide2 text-mute">Nadeen Rouphael — Founder, Atelier Nadeen</figcaption>
       </figure>
-
       <div class="reveal max-w-md">
-        <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink mb-8">Nadine Rouphael</h2>
+        <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink mb-8">Nadeen Rouphael</h2>
         <p class="text-base md:text-lg font-light leading-relaxed text-charcoal">
-          Nadine Rouphael is a distinguished interior designer and artist based in Beirut, Lebanon.
+          Nadeen Rouphael is a distinguished interior designer and artist based in Beirut, Lebanon.
           As the founder of Atelier Nadeen, she has carved a niche for herself in the realms of both
           interior design and ceramic art. Her creative journey began with a deep-rooted passion for
           art, which she completes through her work with paint and ceramics. With extensive experience
-          working alongside European designers in the furniture industry, Nadine developed a profound
+          working alongside European designers in the furniture industry, Nadeen developed a profound
           interest in ceramic art. This newfound passion allowed her to explore and present unique
           perspectives, offering fresh and innovative angles on design. Her work is a testament to her
           ability to blend artistic expression with functional aesthetics.
@@ -454,62 +517,54 @@
     </div>
   </section>
 
-  <!-- ===================== 4 · NEWS & EXHIBITIONS ===================== -->
   <section id="news" class="scroll-mt-24 bg-mist border-t border-line">
     <div class="mx-auto max-w-[1500px] px-6 md:px-10 py-16 md:py-28">
       <header class="reveal mb-12 md:mb-20">
         <p class="text-[11px] uppercase tracking-wide2 text-mute mb-4">04 — News &amp; Exhibitions</p>
         <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink">Selected Showcases</h2>
       </header>
-
       <ul class="max-w-4xl">
-        <li class="reveal group border-t border-line py-7 md:py-9 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-10 fade hover:opacity-60">
+        <li class="reveal"><a href="news/wedesign-beirut.html" class="group border-t border-line py-7 md:py-9 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-10 fade hover:opacity-50">
           <span class="text-[11px] uppercase tracking-wide2 text-mute sm:w-40 shrink-0">Exhibition / Showcase</span>
-          <span class="text-2xl md:text-3xl font-extralight tracking-tight text-ink">WEdesign Beirut</span>
-        </li>
-        <li class="reveal group border-t border-line py-7 md:py-9 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-10 fade hover:opacity-60">
+          <span class="flex-1 text-2xl md:text-3xl font-extralight tracking-tight text-ink">WEdesign Beirut</span>
+          <span class="text-[11px] uppercase tracking-wide2 text-mute self-center">View →</span>
+        </a></li>
+        <li class="reveal"><a href="news/menart-fair.html" class="group border-t border-line py-7 md:py-9 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-10 fade hover:opacity-50">
           <span class="text-[11px] uppercase tracking-wide2 text-mute sm:w-40 shrink-0">Exhibition Showcase</span>
-          <span class="text-2xl md:text-3xl font-extralight tracking-tight text-ink">Menart Fair — Belgium</span>
-        </li>
-        <li class="reveal group border-t border-b border-line py-7 md:py-9 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-10 fade hover:opacity-60">
+          <span class="flex-1 text-2xl md:text-3xl font-extralight tracking-tight text-ink">Menart Fair — Belgium</span>
+          <span class="text-[11px] uppercase tracking-wide2 text-mute self-center">View →</span>
+        </a></li>
+        <li class="reveal"><a href="news/art-of-living.html" class="group border-t border-b border-line py-7 md:py-9 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-10 fade hover:opacity-50">
           <span class="text-[11px] uppercase tracking-wide2 text-mute sm:w-40 shrink-0">Exhibition Showcase</span>
-          <span class="text-2xl md:text-3xl font-extralight tracking-tight text-ink">Art of Living — Abu Dhabi</span>
-        </li>
+          <span class="flex-1 text-2xl md:text-3xl font-extralight tracking-tight text-ink">Art of Living — Abu Dhabi</span>
+          <span class="text-[11px] uppercase tracking-wide2 text-mute self-center">View →</span>
+        </a></li>
       </ul>
     </div>
   </section>
 
-  <!-- ===================== 5 · MEDIA & PRESS ===================== -->
   <section id="press" class="scroll-mt-24 mx-auto max-w-[1500px] px-6 md:px-10 py-20 md:py-36 border-t border-line">
     <header class="reveal mb-12 md:mb-20">
       <p class="text-[11px] uppercase tracking-wide2 text-mute mb-4">05 — Media &amp; Press</p>
       <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink">In Print</h2>
     </header>
-
     <div class="grid md:grid-cols-2 gap-12 md:gap-20 max-w-5xl">
-      <figure class="reveal">
+      <a href="press/ad-middle-east.html" class="reveal group block fade hover:opacity-60">
         <blockquote class="text-xl md:text-2xl font-extralight leading-relaxed text-charcoal">
           “Recognized by AD Magazine as one of the most remarkable ceramists of our time,
           acknowledging her significant contributions to the field.”
         </blockquote>
-        <figcaption class="mt-6 text-[11px] uppercase tracking-wide2 text-mute">
-          AD Middle East — Featured Profile
-        </figcaption>
-      </figure>
-
-      <figure class="reveal md:border-l md:border-line md:pl-20 flex flex-col justify-center">
+        <figcaption class="mt-6 text-[11px] uppercase tracking-wide2 text-mute">AD Middle East — Featured Profile&nbsp;&nbsp;→</figcaption>
+      </a>
+      <a href="press/interior-design-magazine.html" class="reveal group block md:border-l md:border-line md:pl-20 fade hover:opacity-60">
         <p class="text-xl md:text-2xl font-extralight leading-relaxed text-charcoal">
-          An editorial feature exploring the materials, process and quiet philosophy behind
-          Atelier Nadeen.
+          An editorial feature exploring the materials, process and quiet philosophy behind Atelier Nadeen.
         </p>
-        <figcaption class="mt-6 text-[11px] uppercase tracking-wide2 text-mute">
-          Interior Design Magazine — Editorial Feature
-        </figcaption>
-      </figure>
+        <figcaption class="mt-6 text-[11px] uppercase tracking-wide2 text-mute">Interior Design Magazine — Editorial Feature&nbsp;&nbsp;→</figcaption>
+      </a>
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
   <footer class="border-t border-line bg-paper">
     <div class="mx-auto max-w-[1500px] px-6 md:px-10 py-14 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
       <div class="flex items-center gap-3">
@@ -526,43 +581,99 @@
         <li><a href="#news"      class="nav-link">News</a></li>
         <li><a href="#press"     class="nav-link">Press</a></li>
       </ul>
-      <p class="text-[11px] uppercase tracking-wide2 text-mute">© <span id="year"></span> Nadine Rouphael</p>
+      <p class="text-[11px] uppercase tracking-wide2 text-mute">© <span id="year"></span> Nadeen Rouphael</p>
     </div>
   </footer>
 
-  <!-- ===================== JAVASCRIPT ===================== -->
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lb closed fixed inset-0 z-[70] bg-paper flex flex-col">
+    <div class="flex items-center justify-between h-16 px-6 border-b border-line shrink-0">
+      <div class="flex items-baseline gap-4">
+        <span id="lbTitle" class="text-xs font-light uppercase tracking-brand text-ink"></span>
+        <span id="lbCount" class="text-[11px] uppercase tracking-wide2 text-mute"></span>
+      </div>
+      <button id="lbClose" aria-label="Close gallery" class="relative w-7 h-7">
+        <span class="absolute left-0 top-1/2 h-px w-7 bg-ink rotate-45"></span>
+        <span class="absolute left-0 top-1/2 h-px w-7 bg-ink -rotate-45"></span>
+      </button>
+    </div>
+    <div class="relative flex-1 min-h-0 flex items-center justify-center px-4 md:px-20 py-6">
+      <button id="lbPrev" aria-label="Previous" class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-2xl font-extralight text-charcoal nav-link">‹</button>
+      <img id="lbImg" class="lb-img max-h-full max-w-full object-contain" alt="" />
+      <button id="lbNext" aria-label="Next" class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-2xl font-extralight text-charcoal nav-link">›</button>
+    </div>
+    <div id="lbStrip" class="no-scrollbar shrink-0 flex gap-2 overflow-x-auto px-4 md:px-20 pb-5 pt-1"></div>
+  </div>
+
   <script>
     (function () {
       'use strict';
+      var GALLERIES = {"mebuki": {"title": "Mebuki Garden", "material": "Glazed Stoneware", "images": ["MEBUKI%20GARDEN%20%281%29.webp", "MEBUKI%20GARDEN%20%282%29.webp", "MEBUKI%20GARDEN%20%283%29.webp", "MEBUKI%20GARDEN%20%284%29.webp", "MEBUKI%20GARDEN%20%285%29.webp", "MEBUKI%20GARDEN%20%286%29.webp", "MEBUKI%20GARDEN%20%287%29.webp", "MEBUKI%20GARDEN%20%288%29.webp", "MEBUKI%20GARDEN%20%289%29.webp", "MEBUKI%20GARDEN%20%2810%29.webp", "MEBUKI%20GARDEN%20%2811%29.webp", "MEBUKI%20GARDEN%20%2812%29.webp", "MEBUKI%20GARDEN%20%2813%29.webp", "MEBUKI%20GARDEN%20%2814%29.webp", "MEBUKI%20GARDEN%20%2815%29.webp", "MEBUKI%20GARDEN%20%2816%29.webp", "MEBUKI%20GARDEN%20%2817%29.webp", "MEBUKI%20GARDEN%20%2818%29.webp", "MEBUKI%20GARDEN%20%2819%29.webp", "MEBUKI%20GARDEN%20%2820%29.webp", "MEBUKI%20GARDEN%20%2821%29.webp", "MEBUKI%20GARDEN%20%2822%29.webp", "MEBUKI%20GARDEN%20%2823%29.webp", "MEBUKI%20GARDEN%20%2824%29.webp", "MEBUKI%20GARDEN%20%2825%29.webp", "MEBUKI%20GARDEN%20%2826%29.webp"]}, "table": {"title": "Art de la Table", "material": "Porcelain", "images": ["ART%20DE%20LA%20TABLE%20%281%29.webp", "ART%20DE%20LA%20TABLE%20%282%29.webp", "ART%20DE%20LA%20TABLE%20%283%29.webp", "ART%20DE%20LA%20TABLE%20%284%29.webp", "ART%20DE%20LA%20TABLE%20%285%29.webp", "ART%20DE%20LA%20TABLE%20%286%29.webp", "ART%20DE%20LA%20TABLE%20%287%29.webp", "ART%20DE%20LA%20TABLE%20%288%29.webp", "ART%20DE%20LA%20TABLE%20%289%29.webp", "ART%20DE%20LA%20TABLE%20%2810%29.webp", "ART%20DE%20LA%20TABLE%20%2811%29.webp", "ART%20DE%20LA%20TABLE%20%2812%29.webp", "ART%20DE%20LA%20TABLE%20%2813%29.webp", "ART%20DE%20LA%20TABLE%20%2814%29.webp", "ART%20DE%20LA%20TABLE%20%2815%29.webp", "ART%20DE%20LA%20TABLE%20%2816%29.webp", "ART%20DE%20LA%20TABLE%20%2817%29.webp", "ART%20DE%20LA%20TABLE%20%2818%29.webp", "ART%20DE%20LA%20TABLE%20%2819%29.webp", "ART%20DE%20LA%20TABLE%20%2820%29.webp", "ART%20DE%20LA%20TABLE%20%2821%29.webp", "ART%20DE%20LA%20TABLE%20%2822%29.webp"]}, "roller": {"title": "Rollercoaster", "material": "Glazed Ceramic", "images": ["rollercoaster%20%281%29.webp", "rollercoaster%20%282%29.webp", "rollercoaster%20%283%29.webp", "rollercoaster%20%284%29.webp", "rollercoaster%20%285%29.webp", "rollercoaster%20%286%29.webp", "rollercoaster%20%287%29.webp", "rollercoaster%20%288%29.webp", "rollercoaster%20%289%29.webp", "rollercoaster%20%2810%29.webp", "rollercoaster%20%2811%29.webp", "rollercoaster%20%2812%29.webp", "rollercoaster%20%2813%29.webp", "rollercoaster%20%2814%29.webp", "rollercoaster%20%2815%29.webp", "rollercoaster%20%2816%29.webp", "rollercoaster%20%2817%29.webp", "rollercoaster%20%2818%29.webp", "rollercoaster%20%2819%29.webp", "rollercoaster%20%2820%29.webp", "rollercoaster%20%2821%29.webp", "rollercoaster%20%2822%29.webp", "rollercoaster%20%2823%29.webp", "rollercoaster%20%2824%29.webp"]}, "blue": {"title": "Blue", "material": "Glazed Ceramic", "images": ["BLUE.webp"]}, "bonhomme": {"title": "Bonhomme", "material": "Ceramic Figure", "images": ["bonhomme%20%281%29.webp", "bonhomme%20%282%29.webp", "bonhomme%20%283%29.webp", "bonhomme%20%284%29.webp", "bonhomme%20%285%29.webp", "bonhomme%20%286%29.webp", "bonhomme%20%287%29.webp", "bonhomme%20%288%29.webp", "bonhomme%20%289%29.webp", "bonhomme%20%2810%29.webp", "bonhomme%20%2811%29.webp", "bonhomme%20%2812%29.webp", "bonhomme%20%2813%29.webp", "bonhomme%20%2814%29.webp", "bonhomme%20%2815%29.webp", "bonhomme%20%2816%29.webp", "bonhomme%20%2817%29.webp", "bonhomme%20%2818%29.webp", "bonhomme%20%2819%29.webp", "bonhomme%20%2820%29.webp", "bonhomme%20%2821%29.webp", "bonhomme%20%2822%29.webp", "bonhomme%20%2823%29.webp", "bonhomme%20%2824%29.webp", "bonhomme%20%2825%29.webp", "bonhomme%20%2826%29.webp", "bonhomme%20%2827%29.webp", "bonhomme%20%2828%29.webp", "bonhomme%20%2829%29.webp", "bonhomme%20%2830%29.webp", "bonhomme%20%2831%29.webp", "bonhomme%20%2832%29.webp", "bonhomme%20%2833%29.webp", "bonhomme%20%2834%29.webp", "bonhomme%20%2835%29.webp", "bonhomme%20%2836%29.webp", "bonhomme%20%2837%29.webp", "bonhomme%20%2838%29.webp", "bonhomme%20%2839%29.webp", "bonhomme%20%2840%29.webp", "bonhomme%20%2841%29.webp", "bonhomme%20%2842%29.webp", "bonhomme%20%2843%29.webp", "bonhomme%20%2844%29.webp", "bonhomme%20%2845%29.webp", "bonhomme%20%2846%29.webp", "bonhomme%20%2847%29.webp", "bonhomme%20%2848%29.webp", "bonhomme%20%2849%29.webp", "bonhomme%20%2850%29.webp", "bonhomme%20%2851%29.webp", "bonhomme%20%2852%29.webp", "bonhomme%20%2853%29.webp", "bonhomme%20%2854%29.webp", "bonhomme%20%2855%29.webp", "bonhomme%20%2856%29.webp", "bonhomme%20%2857%29.webp", "bonhomme%20%2858%29.webp", "bonhomme%20%2859%29.webp", "bonhomme%20%2860%29.webp", "bonhomme%20%2861%29.webp", "bonhomme%20%2862%29.webp", "bonhomme%20%2863%29.webp", "bonhomme%20%2864%29.webp", "bonhomme%20%2865%29.webp", "bonhomme%20%2866%29.webp", "bonhomme%20%2867%29.webp", "bonhomme%20%2868%29.webp", "bonhomme%20%2869%29.webp", "bonhomme%20%2870%29.webp", "bonhomme%20%2871%29.webp", "bonhomme%20%2872%29.webp", "bonhomme%20%2873%29.webp", "bonhomme%20%2874%29.webp", "bonhomme%20%2875%29.webp"]}, "spectrum": {"title": "Spectrum", "material": "Glazed Stoneware", "images": ["SPECTRUM%20%281%29.webp", "SPECTRUM%20%282%29.webp"]}, "orange": {"title": "Orange", "material": "Glazed Ceramic", "images": ["ORANGE.webp"]}, "mulholland": {"title": "Mulholland Drive", "material": "Black Stoneware", "images": ["Collection%200/mulholland%20drive%201.jpg", "Collection%200/mulholland%20drive%202.jpg", "Collection%200/mulholland%20drive%203.jpg", "Collection%200/mulholland%20drive%204.jpg", "Collection%200/mulholland%20drive%205.jpg", "Collection%200/mulholland%20drive%206.jpg", "Collection%200/mulholland%20drive%207.jpg", "Collection%200/mulholland%20drive%208.jpg", "Collection%200/mulholland%20drive%209.jpg", "Collection%200/mulholland%20drive.jpg"]}, "yellow": {"title": "Yellow", "material": "Glazed Ceramic", "images": ["YELLOW.webp"]}, "mirror": {"title": "Mirror", "material": "Ceramic & Glass", "images": ["MIRROR%20%281%29.webp", "MIRROR%20%282%29.webp", "MIRROR%20%283%29.webp", "MIRROR%20%284%29.webp", "MIRROR%20%285%29.webp", "MIRROR%20%286%29.webp", "MIRROR%20%287%29.webp", "MIRROR%20%288%29.webp", "Mirror.webp"]}, "ant": {"title": "Ant", "material": "Mixed Media", "images": ["Collection%200/ant%201.jpg", "Collection%200/ant%202.jpg", "Collection%200/ant%203.jpg", "Collection%200/ant%204.jpg", "Collection%200/ant%205.jpg", "Collection%200/ant%206.jpg", "Collection%200/ant%207.jpg", "Collection%200/ant%208.jpg", "Collection%200/ant%209.jpg", "Collection%200/ant%2010.jpg", "Collection%200/ant.jpg"]}, "serene": {"title": "Serene", "material": "Stoneware", "images": ["SERENE%20%281%29.webp", "SERENE%20%282%29.webp", "SERENE%20%283%29.webp", "SERENE%20%284%29.webp", "SERENE%20%285%29.webp", "SERENE%20%286%29.webp", "SERENE%20%287%29.webp", "SERENE%20%288%29.webp"]}, "figures": {"title": "Figures", "material": "Glazed Ceramic", "images": ["Collection%202/image00001.jpg", "Collection%202/image00002.jpg", "Collection%202/image00003.jpg", "Collection%202/image00004.jpg", "Collection%202/image00005.jpg", "Collection%202/image00006.jpg", "Collection%202/image00007.jpg", "Collection%202/image00008.jpg", "Collection%202/image00009.jpg", "Collection%202/image00010.jpg", "Collection%202/image00011.jpg", "Collection%202/image00012.jpg", "Collection%202/image00013.jpg", "Collection%202/image00014.jpg", "Collection%202/image00015.jpg", "Collection%202/image00016.jpg", "Collection%202/image00017.jpg", "Collection%202/image00018.jpg", "Collection%202/image00019.jpg", "Collection%202/image00020.jpg", "Collection%202/image00021.jpg", "Collection%202/image00022.jpg", "Collection%202/image00023.jpg", "Collection%202/image00024.jpg", "Collection%202/image00025.jpg", "Collection%202/image00026.jpg", "Collection%202/image00027.jpg", "Collection%202/image00028.jpg", "Collection%202/image00029.jpg", "Collection%202/image00030.jpg", "Collection%202/image00031.jpg", "Collection%202/image00032.jpg", "Collection%202/image00033.jpg", "Collection%202/image00034.jpg", "Collection%202/image00035.jpg", "Collection%202/image00036.jpg", "Collection%202/image00037.jpg", "Collection%202/image00038.jpg", "Collection%202/image00039.jpg", "Collection%202/image00040.jpg", "Collection%202/image00041.jpg"]}, "shelf": {"title": "Shelf", "material": "Porcelain", "images": ["SHELF%20%281%29.webp", "SHELF%202%20%281%29.webp", "SHELF%202%20%282%29.webp"]}, "hillbun": {"title": "Hill Bun", "material": "Textured Stoneware", "images": ["Collection%200/hill%20bun%201.jpg", "Collection%200/hill%20bun%202.jpg", "Collection%200/hill%20bun%203.jpg", "Collection%200/hill%20bun%204.jpg", "Collection%200/hill%20bun%205.jpg", "Collection%200/hill%20bun%206.jpg", "Collection%200/hill%20bun%207.jpg", "Collection%200/hill%20bun%208.jpg", "Collection%200/hill%20bun.jpg"]}, "sapience": {"title": "Sapience Serene", "material": "Sculptural Form", "images": ["SAPIENCE%20SERENCE%20%281%29.webp", "SAPIENCE%20SERENCE%20%282%29.webp", "SAPIENCE%20SERENCE%20%283%29.webp", "SAPIENCE%20SERENCE%20%284%29.webp", "SAPIENCE%20SERENCE%20%285%29.webp", "SAPIENCE%20SERENCE%20%286%29.webp", "SAPIENCE%20SERENCE%20%287%29.webp", "SAPIENCE%20SERENCE%20%288%29.webp", "SAPIENCE%20SERENCE%20%289%29.webp", "SAPIENCE%20SERENCE%20%2810%29.webp", "SAPIENCE%20SERENCE%20%2811%29.webp", "SAPIENCE%20SERENCE%20%2812%29.webp", "SAPIENCE%20SERENCE%20%2813%29.webp", "SAPIENCE%20SERENCE%20%2814%29.webp", "SAPIENCE%20SERENCE%20%2815%29.webp", "SAPIENCE%20%285%29.webp", "SAPIENCE%20%286%29.webp"]}, "tea": {"title": "Tea Service", "material": "Porcelain", "images": ["Collection%204/PHOTO-2021-03-04-15-36-35.jpg", "Collection%204/PHOTO-2021-03-04-15-36-36%202.jpg", "Collection%204/PHOTO-2021-03-04-15-36-36.jpg", "Collection%204/PHOTO-2021-03-04-15-36-37%202.jpg", "Collection%204/PHOTO-2021-03-04-15-36-37.jpg", "Collection%204/PHOTO-2021-03-04-15-36-38%202.jpg", "Collection%204/PHOTO-2021-03-04-15-36-38%203.jpg", "Collection%204/PHOTO-2021-03-04-15-36-38.jpg", "Collection%204/PHOTO-2021-03-04-15-36-39.jpg"]}, "mirror2": {"title": "Mirror II", "material": "Ceramic & Glass", "images": ["MIRROR%202%20%281%29.webp", "MIRROR%202%20%282%29.webp", "MIRROR%202%20%283%29.webp", "MIRROR%202%20%284%29.webp", "MIRROR%202%20%285%29.webp", "MIRROR%202%20%286%29.webp", "MIRROR%202%20%287%29.webp", "MIRROR%202%20%288%29.webp"]}, "arci": {"title": "Arci", "material": "Stoneware", "images": ["Collection%200/arci%201.jpg", "Collection%200/arci%202.jpg", "Collection%200/arci%203.jpg", "Collection%200/arci%204.jpg", "Collection%200/arci%205.jpg", "Collection%200/arci.jpg"]}, "cups": {"title": "Cups", "material": "Porcelain", "images": ["cup%20%281%29.webp", "cup%20%282%29.webp", "cup%20%283%29.webp", "cup%20%284%29.webp", "cup%20%285%29.webp", "cup%20%286%29.webp"]}, "remains": {"title": "What Remains, What Is", "material": "Installation", "images": ["WHAT%20REMAINS%20WHAT%20IS%20%281%29.webp", "WHAT%20REMAINS%20WHAT%20IS%20%282%29.webp", "WHAT%20REMAINS%20WHAT%20IS%20%283%29.webp", "WHAT%20REMAINS%20WHAT%20IS%20%284%29.webp", "WHAT%20REMAINS%20WHAT%20IS%20%285%29.webp", "WHAT%20REMAINS%20WHAT%20IS%20%286%29.webp", "WHAT%20REMAINS%20WHAT%20IS%20%287%29.webp", "WHAT%20REMAINS%20WHAT%20IS%20%288%29.webp", "WHAT%20REMAINS%20WHAT%20IS%20%289%29.webp", "WHAT%20REMAINS%20WHAT%20IS%20%2810%29.webp", "WHAT%20REMAINS%20WHAT%20IS%20%2811%29.webp"]}, "media": {"title": "Media", "material": "Patterned Ceramic", "images": ["Collection%200/media1.jpg", "Collection%200/media%202.jpg", "Collection%200/media%203.jpg", "Collection%200/media%204.jpg"]}, "wall": {"title": "Wall Lighting Fixture", "material": "Glazed Ceramic", "images": ["WALL%20LIGHTING%20FIXTURE%20%281%29.webp", "WALL%20LIGHTING%20FIXTURE%20%284%29.webp", "WALL%20LIGHTING%20FIXTURE%20%285%29.webp", "WALL%20LIGHTING%20FIXTURE%20%286%29.webp", "WALL%20LIGHTING%20FIXTURE%20%287%29.webp", "WALL%20LIGHTING%20FIXTURE%20%288%29.webp", "WALL%20LIGHTING%20FIXTURE%20%289%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2810%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2811%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2812%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2813%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2814%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2815%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2816%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2817%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2818%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2819%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2820%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2821%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2822%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2823%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2824%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2825%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2826%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2827%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2828%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2829%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2830%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2831%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2832%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2833%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2834%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2835%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2836%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2837%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2838%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2839%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2840%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2841%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2842%29.webp"]}, "paintings": {"title": "Paintings", "material": "", "images": ["Collection%201/Painting/image00001.jpg", "Collection%201/Painting/image00019.jpg", "Collection%201/Painting/image00002.jpg", "Collection%201/Painting/image00017.jpg", "Collection%201/Painting/image00008.jpg", "Collection%201/Painting/image00037.jpg", "Collection%201/Painting/image00036.jpg", "Collection%201/Painting/image00021.jpg", "Collection%201/Painting/image00040.jpg"]}};
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      const overlay = document.getElementById('overlay');
-      const open = document.getElementById('menuOpen');
-      const close = document.getElementById('menuClose');
-      const setMenu = (isOpen) => {
-        overlay.classList.toggle('open', isOpen);
-        overlay.classList.toggle('closed', !isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-      };
-      open.addEventListener('click', () => setMenu(true));
-      close.addEventListener('click', () => setMenu(false));
-      document.querySelectorAll('.overlay-link').forEach((l) => l.addEventListener('click', () => setMenu(false)));
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+      // mobile overlay
+      var overlay=document.getElementById('overlay'), mo=document.getElementById('menuOpen'), mc=document.getElementById('menuClose');
+      function setMenu(o){overlay.classList.toggle('open',o);overlay.classList.toggle('closed',!o);document.body.style.overflow=o?'hidden':'';}
+      mo.addEventListener('click',function(){setMenu(true);});
+      mc.addEventListener('click',function(){setMenu(false);});
+      Array.prototype.forEach.call(document.querySelectorAll('.overlay-link'),function(l){l.addEventListener('click',function(){setMenu(false);});});
 
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      // reveal
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+      Array.prototype.forEach.call(document.querySelectorAll('.reveal'),function(el){io.observe(el);});
+
+      // carousel drag
+      var car=document.getElementById('carousel'),down=false,sx=0,ss=0;
+      car.addEventListener('pointerdown',function(e){down=true;sx=e.clientX;ss=car.scrollLeft;car.style.cursor='grabbing';car._moved=false;});
+      function endd(){down=false;car.style.cursor='grab';}
+      car.addEventListener('pointerup',endd); car.addEventListener('pointerleave',endd);
+      car.addEventListener('pointermove',function(e){if(!down)return;if(Math.abs(e.clientX-sx)>4)car._moved=true;car.scrollLeft=ss-(e.clientX-sx);});
+
+      // lightbox
+      var lb=document.getElementById('lightbox'), lbImg=document.getElementById('lbImg'),
+          lbTitle=document.getElementById('lbTitle'), lbCount=document.getElementById('lbCount'),
+          lbStrip=document.getElementById('lbStrip');
+      var cur=null, idx=0;
+      function render(){
+        var g=GALLERIES[cur]; if(!g)return;
+        lbImg.style.opacity=0;
+        var src=g.images[idx];
+        var im=new Image();
+        im.onload=function(){lbImg.src=src;lbImg.style.opacity=1;};
+        im.src=src;
+        lbTitle.textContent=g.title;
+        lbCount.textContent=(idx+1)+' / '+g.images.length;
+        Array.prototype.forEach.call(lbStrip.children,function(c,i){c.style.opacity=(i===idx)?'1':'0.4';});
+      }
+      function buildStrip(){
+        var g=GALLERIES[cur]; lbStrip.innerHTML='';
+        if(g.images.length<2){lbStrip.style.display='none';return;} lbStrip.style.display='flex';
+        g.images.forEach(function(src,i){
+          var b=document.createElement('button');
+          b.className='shrink-0 fade'; b.style.opacity=(i===idx)?'1':'0.4';
+          b.innerHTML='<img src="'+src+'" class="h-14 w-14 object-cover" alt="" />';
+          b.addEventListener('click',function(){idx=i;render();});
+          lbStrip.appendChild(b);
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-
-      const car = document.getElementById('carousel');
-      let down = false, startX = 0, startScroll = 0;
-      car.addEventListener('pointerdown', (e) => { down = true; startX = e.clientX; startScroll = car.scrollLeft; car.style.cursor = 'grabbing'; });
-      const end = () => { down = false; car.style.cursor = 'grab'; };
-      car.addEventListener('pointerup', end);
-      car.addEventListener('pointerleave', end);
-      car.addEventListener('pointermove', (e) => { if (!down) return; car.scrollLeft = startScroll - (e.clientX - startX); });
+      }
+      function open(key,i){cur=key;idx=i||0;buildStrip();render();lb.classList.add('open');lb.classList.remove('closed');document.body.style.overflow='hidden';}
+      function close(){lb.classList.remove('open');lb.classList.add('closed');document.body.style.overflow='';}
+      function next(){var g=GALLERIES[cur];idx=(idx+1)%g.images.length;render();}
+      function prev(){var g=GALLERIES[cur];idx=(idx-1+g.images.length)%g.images.length;render();}
+      document.getElementById('lbClose').addEventListener('click',close);
+      document.getElementById('lbNext').addEventListener('click',next);
+      document.getElementById('lbPrev').addEventListener('click',prev);
+      document.addEventListener('keydown',function(e){
+        if(lb.classList.contains('open')){ if(e.key==='Escape')close(); else if(e.key==='ArrowRight')next(); else if(e.key==='ArrowLeft')prev(); }
+        else if(e.key==='Escape'){setMenu(false);}
+      });
+      // bind triggers
+      Array.prototype.forEach.call(document.querySelectorAll('[data-gallery]'),function(el){
+        var key=el.getAttribute('data-gallery'); var di=parseInt(el.getAttribute('data-index')||'0',10);
+        function go(){ if(el.closest('#carousel')&&car._moved)return; open(key,di); }
+        el.addEventListener('click',go);
+        el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(key,di);}});
+      });
     })();
   </script>
 </body>

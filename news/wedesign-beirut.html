@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEdesign Beirut — Nadeen Rouphael</title>
+  <meta name="description" content="WEdesign Beirut — Exhibition / Showcase. Nadeen Rouphael, Atelier Nadeen." />
+  <link rel="icon" href="../website%20logo.jpeg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { ink:'#000000', charcoal:'#111111', mute:'#6b6b6b', line:'#e7e7e7', paper:'#ffffff', mist:'#f7f7f7' },
+      fontFamily: { sans: ['Inter','Helvetica Neue','Arial','sans-serif'] },
+      letterSpacing: { brand:'0.32em', wide2:'0.22em' },
+    } } };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior:smooth; } body { -webkit-font-smoothing:antialiased; }
+    .nav-link { transition: opacity 600ms ease; } .nav-link:hover { opacity:0.45; }
+  </style>
+</head>
+<body class="bg-paper text-charcoal font-sans antialiased selection:bg-black selection:text-white">
+  <header class="sticky top-0 z-50 bg-paper/90 backdrop-blur-sm border-b border-line">
+    <nav class="mx-auto max-w-[1500px] px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
+      <a href="../index.html" class="nav-link flex items-center gap-3 text-ink">
+        <img src="../website%20logo.jpeg" alt="Atelier Nadeen mark" class="h-7 w-7 md:h-8 md:w-8 object-contain" />
+        <span class="text-xs md:text-sm font-light uppercase tracking-brand">Nadeen&nbsp;Rouphael</span>
+      </a>
+      <a href="../index.html#news" class="nav-link text-[11px] uppercase tracking-wide2 text-charcoal">← Back</a>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-6 md:px-10 py-20 md:py-36">
+    <p class="text-[11px] uppercase tracking-wide2 text-mute mb-6">Exhibition / Showcase</p>
+    <h1 class="text-4xl md:text-6xl font-extralight tracking-tight text-ink leading-[1.05] mb-12 md:mb-16">WEdesign Beirut</h1>
+    <div class="space-y-7 text-lg md:text-xl font-light leading-relaxed text-charcoal">
+      <p>Atelier Nadeen took part in WEdesign Beirut — a platform celebrating Lebanese design, craft and contemporary making. The studio presented a selection of sculptural ceramic works exploring colour, form and the expressive possibilities of clay.</p>
+      <p>Set within Beirut's vibrant design community, the showcase placed Nadeen Rouphael's pieces in dialogue with a new generation of regional makers, underlining her distinctive blend of functional aesthetics and artistic expression.</p>
+    </div>
+
+    <div class="mt-16 md:mt-24 border-t border-line pt-10">
+      <p class="text-[11px] uppercase tracking-wide2 text-mute mb-3">Atelier Nadeen</p>
+      <p class="text-sm font-light text-mute italic">Additional images and full coverage can be added here.</p>
+    </div>
+
+    <div class="mt-14">
+      <a href="../index.html#news" class="nav-link text-[11px] uppercase tracking-wide2 text-ink border-b border-ink pb-1">← Back to News &amp; Exhibitions</a>
+    </div>
+  </main>
+
+  <footer class="border-t border-line bg-paper">
+    <div class="mx-auto max-w-[1500px] px-6 md:px-10 py-12 flex items-center gap-3">
+      <img src="../website%20logo.jpeg" alt="Atelier Nadeen mark" class="h-8 w-8 object-contain" />
+      <div>
+        <p class="text-xs font-light uppercase tracking-brand text-ink mb-1">Atelier Nadeen</p>
+        <p class="text-sm font-light text-mute">Beirut, Lebanon</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
