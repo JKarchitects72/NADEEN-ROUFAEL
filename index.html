@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nadine Rouphael — Atelier Nadeen</title>
   <meta name="description" content="Nadine Rouphael — distinguished interior designer and ceramic artist based in Beirut, Lebanon. Founder of Atelier Nadeen." />
+  <link rel="icon" href="website%20logo.jpeg" />
 
   <!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -13,20 +14,11 @@
       theme: {
         extend: {
           colors: {
-            ink: '#000000',
-            charcoal: '#111111',
-            mute: '#6b6b6b',
-            line: '#e7e7e7',
-            paper: '#ffffff',
-            mist: '#f7f7f7',
+            ink: '#000000', charcoal: '#111111', mute: '#6b6b6b',
+            line: '#e7e7e7', paper: '#ffffff', mist: '#f7f7f7',
           },
-          fontFamily: {
-            sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
-          },
-          letterSpacing: {
-            brand: '0.32em',
-            wide2: '0.22em',
-          },
+          fontFamily: { sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'] },
+          letterSpacing: { brand: '0.32em', wide2: '0.22em' },
         },
       },
     };
@@ -41,7 +33,6 @@
     html { scroll-behavior: smooth; }
     body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 
-    /* Ultra-smooth, slow opacity fades */
     .fade { transition: opacity 700ms cubic-bezier(0.25, 0.1, 0.25, 1); }
     .nav-link { transition: color 600ms cubic-bezier(0.25, 0.1, 0.25, 1), opacity 600ms ease; }
     .nav-link:hover { opacity: 0.45; }
@@ -49,15 +40,12 @@
     .img-fade { transition: opacity 900ms cubic-bezier(0.22, 0.61, 0.36, 1), filter 900ms ease; }
     .img-wrap:hover .img-fade { opacity: 0.78; }
 
-    /* Reveal on scroll */
     .reveal { opacity: 0; transform: translateY(18px); transition: opacity 1100ms cubic-bezier(0.22,0.61,0.36,1), transform 1100ms cubic-bezier(0.22,0.61,0.36,1); }
     .reveal.is-visible { opacity: 1; transform: none; }
 
-    /* Hide scrollbar on the paintings carousel */
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-    /* Full-screen overlay menu */
     .overlay { transition: opacity 600ms ease, visibility 600ms ease; }
     .overlay.closed { opacity: 0; visibility: hidden; pointer-events: none; }
     .overlay.open { opacity: 1; visibility: visible; pointer-events: auto; }
@@ -74,12 +62,11 @@
   <!-- ===================== NAVIGATION ===================== -->
   <header id="top" class="sticky top-0 z-50 bg-paper/90 backdrop-blur-sm border-b border-line">
     <nav class="mx-auto max-w-[1500px] px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
-      <!-- Logo -->
-      <a href="#top" class="nav-link text-ink text-xs md:text-sm font-light uppercase tracking-brand">
-        Nadine&nbsp;Rouphael
+      <a href="#top" class="nav-link flex items-center gap-3 text-ink">
+        <img src="website%20logo.jpeg" alt="Atelier Nadeen mark" class="h-7 w-7 md:h-8 md:w-8 object-contain" />
+        <span class="text-xs md:text-sm font-light uppercase tracking-brand">Nadine&nbsp;Rouphael</span>
       </a>
 
-      <!-- Desktop menu -->
       <ul class="hidden md:flex items-center gap-9 lg:gap-12 text-[11px] uppercase tracking-wide2 font-light text-charcoal">
         <li><a href="#ceramics"   class="nav-link">Ceramics</a></li>
         <li><a href="#paintings"  class="nav-link">Paintings</a></li>
@@ -88,7 +75,6 @@
         <li><a href="#press"      class="nav-link">Media &amp; Press</a></li>
       </ul>
 
-      <!-- Hamburger -->
       <button id="menuOpen" aria-label="Open menu" class="md:hidden flex flex-col gap-[6px] w-7 group">
         <span class="block h-px w-7 bg-ink fade group-hover:opacity-50"></span>
         <span class="block h-px w-7 bg-ink fade group-hover:opacity-50"></span>
@@ -115,7 +101,7 @@
   </div>
 
   <!-- ===================== HERO ===================== -->
-  <section class="mx-auto max-w-[1500px] px-6 md:px-10 pt-24 md:pt-40 pb-20 md:pb-32">
+  <section class="mx-auto max-w-[1500px] px-6 md:px-10 pt-20 md:pt-32 pb-16 md:pb-24">
     <div class="reveal max-w-4xl">
       <p class="text-[11px] uppercase tracking-wide2 text-mute mb-8">Beirut, Lebanon — Atelier Nadeen</p>
       <h1 class="text-4xl sm:text-5xl md:text-7xl font-extralight leading-[1.05] tracking-tight text-ink">
@@ -132,6 +118,14 @@
     </div>
   </section>
 
+  <!-- Hero image band -->
+  <section class="reveal img-wrap group mx-auto max-w-[1500px] px-6 md:px-10 mb-4 md:mb-10">
+    <div class="overflow-hidden bg-mist">
+      <img src="MEBUKI%20GARDEN%20%281%29.webp" alt="Mebuki Garden ceramic series by Nadine Rouphael"
+           loading="lazy" class="img-fade w-full h-[44vh] md:h-[68vh] object-cover" />
+    </div>
+  </section>
+
   <!-- ===================== 1 · CERAMICS COLLECTION ===================== -->
   <section id="ceramics" class="scroll-mt-24 mx-auto max-w-[1500px] px-6 md:px-10 py-16 md:py-28 border-t border-line">
     <header class="reveal mb-12 md:mb-20 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
@@ -140,77 +134,202 @@
         <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink">Ceramics</h2>
       </div>
       <p class="max-w-sm text-sm font-light leading-relaxed text-mute">
-        Functional aesthetics and structural clay forms — vessels, totems and quiet objects
-        built around balance and the honesty of stoneware.
+        Functional aesthetics and structural clay forms — vessels, figures, mirrors and
+        sculptural totems, each series an exploration of colour, balance and the honesty of clay.
       </p>
     </header>
 
-    <!-- Masonry via CSS columns -->
     <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 md:gap-8 [column-fill:_balance]">
-      <!-- Each item -->
       <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
         <div class="overflow-hidden bg-mist">
-          <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=900&q=80"
-               alt="Sculptural stoneware vase" loading="lazy"
-               class="img-fade w-full object-cover" />
+          <img src="MEBUKI%20GARDEN%20%281%29.webp" alt="Mebuki Garden — Glazed Stoneware" loading="lazy" class="img-fade w-full object-cover" />
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Sculptural Vase</span><span class="text-mute">Stoneware</span>
+          <span>Mebuki Garden</span><span class="text-mute">Glazed Stoneware</span>
         </figcaption>
       </figure>
-
       <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
         <div class="overflow-hidden bg-mist">
-          <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=900&q=80"
-               alt="Glazed ceramic totem" loading="lazy"
-               class="img-fade w-full object-cover" />
+          <img src="ART%20DE%20LA%20TABLE%20%281%29.webp" alt="Art de la Table — Porcelain" loading="lazy" class="img-fade w-full object-cover" />
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Glazed Totem</span><span class="text-mute">Atelier Nadeen</span>
+          <span>Art de la Table</span><span class="text-mute">Porcelain</span>
         </figcaption>
       </figure>
-
       <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
         <div class="overflow-hidden bg-mist">
-          <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=900&q=80"
-               alt="Matte bowl in earthen clay" loading="lazy"
-               class="img-fade w-full object-cover" />
+          <img src="rollercoaster%20%281%29.webp" alt="Rollercoaster — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Earthen Bowl</span><span class="text-mute">Matte Clay</span>
+          <span>Rollercoaster</span><span class="text-mute">Glazed Ceramic</span>
         </figcaption>
       </figure>
-
       <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
         <div class="overflow-hidden bg-mist">
-          <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=900&q=80"
-               alt="Pair of hand-thrown vessels" loading="lazy"
-               class="img-fade w-full object-cover" />
+          <img src="BLUE.webp" alt="Blue — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Paired Vessels</span><span class="text-mute">Hand-Thrown</span>
+          <span>Blue</span><span class="text-mute">Glazed Ceramic</span>
         </figcaption>
       </figure>
-
       <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
         <div class="overflow-hidden bg-mist">
-          <img src="https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?auto=format&fit=crop&w=900&q=80"
-               alt="Tall ribbed ceramic form" loading="lazy"
-               class="img-fade w-full object-cover" />
+          <img src="bonhomme%20%281%29.webp" alt="Bonhomme — Ceramic Figure" loading="lazy" class="img-fade w-full object-cover" />
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Ribbed Column</span><span class="text-mute">Reduction Fired</span>
+          <span>Bonhomme</span><span class="text-mute">Ceramic Figure</span>
         </figcaption>
       </figure>
-
       <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
         <div class="overflow-hidden bg-mist">
-          <img src="https://images.unsplash.com/photo-1554188248-986adbb73be4?auto=format&fit=crop&w=900&q=80"
-               alt="Minimal white porcelain cups" loading="lazy"
-               class="img-fade w-full object-cover" />
+          <img src="SPECTRUM%20%281%29.webp" alt="Spectrum — Glazed Stoneware" loading="lazy" class="img-fade w-full object-cover" />
         </div>
         <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-          <span>Quiet Series</span><span class="text-mute">Porcelain</span>
+          <span>Spectrum</span><span class="text-mute">Glazed Stoneware</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="ORANGE.webp" alt="Orange — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Orange</span><span class="text-mute">Glazed Ceramic</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="Collection%200/mulholland%20drive%203.jpg" alt="Mulholland Drive — Black Stoneware" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Mulholland Drive</span><span class="text-mute">Black Stoneware</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="YELLOW.webp" alt="Yellow — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Yellow</span><span class="text-mute">Glazed Ceramic</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="MIRROR%20%281%29.webp" alt="Mirror — Ceramic & Glass" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Mirror</span><span class="text-mute">Ceramic & Glass</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="Collection%200/ant.jpg" alt="Ant — Mixed Media" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Ant</span><span class="text-mute">Mixed Media</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="SERENE%20%281%29.webp" alt="Serene — Stoneware" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Serene</span><span class="text-mute">Stoneware</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="Collection%202/image00005.jpg" alt="Figure — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Figure</span><span class="text-mute">Glazed Ceramic</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="SHELF%20%281%29.webp" alt="Shelf — Porcelain" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Shelf</span><span class="text-mute">Porcelain</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="Collection%200/hill%20bun%204.jpg" alt="Hill Bun — Textured Stoneware" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Hill Bun</span><span class="text-mute">Textured Stoneware</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="SAPIENCE%20SERENCE%20%281%29.webp" alt="Sapience Serene — Sculptural Form" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Sapience Serene</span><span class="text-mute">Sculptural Form</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="Collection%204/PHOTO-2021-03-04-15-36-35.jpg" alt="Tea Service — Porcelain" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Tea Service</span><span class="text-mute">Porcelain</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="MIRROR%202%20%281%29.webp" alt="Mirror II — Ceramic & Glass" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Mirror II</span><span class="text-mute">Ceramic & Glass</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="Collection%200/arci%201.jpg" alt="Arci — Stoneware" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Arci</span><span class="text-mute">Stoneware</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="cup%20%281%29.webp" alt="Cups — Porcelain" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Cups</span><span class="text-mute">Porcelain</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="WHAT%20REMAINS%20WHAT%20IS%20%281%29.webp" alt="What Remains, What Is — Installation" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>What Remains, What Is</span><span class="text-mute">Installation</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="Collection%202/image00013.jpg" alt="Coral Garden — Porcelain" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Coral Garden</span><span class="text-mute">Porcelain</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="Collection%200/media1.jpg" alt="Media — Patterned Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Media</span><span class="text-mute">Patterned Ceramic</span>
+        </figcaption>
+      </figure>
+      <figure class="reveal break-inside-avoid mb-6 md:mb-8 img-wrap group">
+        <div class="overflow-hidden bg-mist">
+          <img src="WALL%20LIGHTING%20FIXTURE%20%281%29.webp" alt="Wall Lighting Fixture — Glazed Ceramic" loading="lazy" class="img-fade w-full object-cover" />
+        </div>
+        <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+          <span>Wall Lighting Fixture</span><span class="text-mute">Glazed Ceramic</span>
         </figcaption>
       </figure>
     </div>
@@ -225,65 +344,82 @@
           <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink">Paintings</h2>
         </div>
         <p class="max-w-sm text-sm font-light leading-relaxed text-mute">
-          A deep-rooted passion for paint — explorations of colour, texture and abstract
-          composition on canvas. Drag or scroll horizontally.
+          A deep-rooted passion for paint — figures, gardens and abstract fields exploring
+          colour, texture and gesture on canvas. Drag or scroll horizontally.
         </p>
       </header>
 
-      <!-- Horizontal scroll carousel -->
       <div id="carousel" class="no-scrollbar flex gap-6 md:gap-8 overflow-x-auto pb-4 snap-x snap-mandatory cursor-grab">
         <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
           <div class="overflow-hidden bg-paper">
-            <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?auto=format&fit=crop&w=1000&q=80"
-                 alt="Abstract painting in warm tones" loading="lazy"
-                 class="img-fade w-full h-[58vh] object-cover" />
+            <img src="Collection%201/Painting/image00001.jpg" alt="Untitled — Figure — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
           <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-            <span>Untitled I</span><span class="text-mute">Acrylic on Canvas</span>
+            <span>Untitled — Figure</span><span class="text-mute">Acrylic on Canvas</span>
           </figcaption>
         </figure>
-
         <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
           <div class="overflow-hidden bg-paper">
-            <img src="https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?auto=format&fit=crop&w=1000&q=80"
-                 alt="Textured abstract composition" loading="lazy"
-                 class="img-fade w-full h-[58vh] object-cover" />
+            <img src="Collection%201/Painting/image00019.jpg" alt="Untitled — Procession — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
           <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-            <span>Field Study</span><span class="text-mute">Mixed Media</span>
+            <span>Untitled — Procession</span><span class="text-mute">Acrylic on Canvas</span>
           </figcaption>
         </figure>
-
         <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
           <div class="overflow-hidden bg-paper">
-            <img src="https://images.unsplash.com/photo-1531913764164-f85c52e6e654?auto=format&fit=crop&w=1000&q=80"
-                 alt="Gestural abstract painting" loading="lazy"
-                 class="img-fade w-full h-[58vh] object-cover" />
+            <img src="Collection%201/Painting/image00002.jpg" alt="Untitled — Blossom — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
           <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-            <span>Movement</span><span class="text-mute">Oil on Linen</span>
+            <span>Untitled — Blossom</span><span class="text-mute">Acrylic on Canvas</span>
           </figcaption>
         </figure>
-
         <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
           <div class="overflow-hidden bg-paper">
-            <img src="https://images.unsplash.com/photo-1502759683299-cdcd6974244f?auto=format&fit=crop&w=1000&q=80"
-                 alt="Soft tonal abstract artwork" loading="lazy"
-                 class="img-fade w-full h-[58vh] object-cover" />
+            <img src="Collection%201/Painting/image00017.jpg" alt="Untitled — The Cloak — Mixed Media" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
           <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-            <span>Tonal No. 4</span><span class="text-mute">Pigment &amp; Wax</span>
+            <span>Untitled — The Cloak</span><span class="text-mute">Mixed Media</span>
           </figcaption>
         </figure>
-
         <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
           <div class="overflow-hidden bg-paper">
-            <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=1000&q=80"
-                 alt="Bold colour-field painting" loading="lazy"
-                 class="img-fade w-full h-[58vh] object-cover" />
+            <img src="Collection%201/Painting/image00008.jpg" alt="Untitled — Field — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
           </div>
           <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
-            <span>Colour Field</span><span class="text-mute">Acrylic on Canvas</span>
+            <span>Untitled — Field</span><span class="text-mute">Acrylic on Canvas</span>
+          </figcaption>
+        </figure>
+        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+          <div class="overflow-hidden bg-paper">
+            <img src="Collection%201/Painting/image00037.jpg" alt="Untitled — Tree — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
+          </div>
+          <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+            <span>Untitled — Tree</span><span class="text-mute">Acrylic on Canvas</span>
+          </figcaption>
+        </figure>
+        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+          <div class="overflow-hidden bg-paper">
+            <img src="Collection%201/Painting/image00036.jpg" alt="Untitled — Figures — Diptych" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
+          </div>
+          <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+            <span>Untitled — Figures</span><span class="text-mute">Diptych</span>
+          </figcaption>
+        </figure>
+        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+          <div class="overflow-hidden bg-paper">
+            <img src="Collection%201/Painting/image00021.jpg" alt="Untitled — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
+          </div>
+          <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+            <span>Untitled</span><span class="text-mute">Acrylic on Canvas</span>
+          </figcaption>
+        </figure>
+        <figure class="reveal snap-start shrink-0 w-[78vw] sm:w-[46vw] lg:w-[32vw] img-wrap group">
+          <div class="overflow-hidden bg-paper">
+            <img src="Collection%201/Painting/image00040.jpg" alt="Untitled — Branches — Acrylic on Canvas" loading="lazy" class="img-fade w-full h-[58vh] object-cover" />
+          </div>
+          <figcaption class="mt-3 flex justify-between text-[11px] uppercase tracking-wide2 text-charcoal">
+            <span>Untitled — Branches</span><span class="text-mute">Acrylic on Canvas</span>
           </figcaption>
         </figure>
       </div>
@@ -294,17 +430,15 @@
   <section id="about" class="scroll-mt-24 mx-auto max-w-[1500px] px-6 md:px-10 py-20 md:py-36 border-t border-line">
     <p class="reveal text-[11px] uppercase tracking-wide2 text-mute mb-12 md:mb-20">03 — About the Artist</p>
     <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-      <!-- Portrait -->
       <figure class="reveal img-wrap group order-1 md:order-none">
         <div class="overflow-hidden bg-mist">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
-               alt="Portrait of Nadine Rouphael" loading="lazy"
-               class="img-fade w-full object-cover aspect-[4/5]" />
+          <!-- TODO: replace with a portrait photograph of Nadine when available -->
+          <img src="SAPIENCE%20SERENCE%20%285%29.webp" alt="Sculptural ceramic work from Atelier Nadeen"
+               loading="lazy" class="img-fade w-full object-cover aspect-[4/5]" />
         </div>
-        <figcaption class="mt-3 text-[11px] uppercase tracking-wide2 text-mute">Nadine Rouphael — Founder, Atelier Nadeen</figcaption>
+        <figcaption class="mt-3 text-[11px] uppercase tracking-wide2 text-mute">Atelier Nadeen — Studio Work</figcaption>
       </figure>
 
-      <!-- Narrow narrative column -->
       <div class="reveal max-w-md">
         <h2 class="text-3xl md:text-5xl font-extralight tracking-tight text-ink mb-8">Nadine Rouphael</h2>
         <p class="text-base md:text-lg font-light leading-relaxed text-charcoal">
@@ -379,9 +513,12 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="border-t border-line bg-paper">
     <div class="mx-auto max-w-[1500px] px-6 md:px-10 py-14 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-      <div>
-        <p class="text-xs font-light uppercase tracking-brand text-ink mb-3">Atelier Nadeen</p>
-        <p class="text-sm font-light text-mute">Beirut, Lebanon</p>
+      <div class="flex items-center gap-3">
+        <img src="website%20logo.jpeg" alt="Atelier Nadeen mark" class="h-8 w-8 object-contain" />
+        <div>
+          <p class="text-xs font-light uppercase tracking-brand text-ink mb-1">Atelier Nadeen</p>
+          <p class="text-sm font-light text-mute">Beirut, Lebanon</p>
+        </div>
       </div>
       <ul class="flex flex-wrap gap-x-8 gap-y-2 text-[11px] uppercase tracking-wide2 text-charcoal">
         <li><a href="#ceramics"  class="nav-link">Ceramics</a></li>
@@ -398,61 +535,35 @@
   <script>
     (function () {
       'use strict';
-
-      // --- Year ---
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      // --- Mobile overlay menu ---
       const overlay = document.getElementById('overlay');
       const open = document.getElementById('menuOpen');
       const close = document.getElementById('menuClose');
-
       const setMenu = (isOpen) => {
         overlay.classList.toggle('open', isOpen);
         overlay.classList.toggle('closed', !isOpen);
         document.body.style.overflow = isOpen ? 'hidden' : '';
       };
-
       open.addEventListener('click', () => setMenu(true));
       close.addEventListener('click', () => setMenu(false));
-      document.querySelectorAll('.overlay-link').forEach((l) =>
-        l.addEventListener('click', () => setMenu(false))
-      );
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') setMenu(false);
-      });
+      document.querySelectorAll('.overlay-link').forEach((l) => l.addEventListener('click', () => setMenu(false)));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
-      // --- Reveal on scroll ---
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              io.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
-      );
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
       document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
-      // --- Drag-to-scroll for paintings carousel ---
       const car = document.getElementById('carousel');
       let down = false, startX = 0, startScroll = 0;
-
-      car.addEventListener('pointerdown', (e) => {
-        down = true;
-        startX = e.clientX;
-        startScroll = car.scrollLeft;
-        car.style.cursor = 'grabbing';
-      });
+      car.addEventListener('pointerdown', (e) => { down = true; startX = e.clientX; startScroll = car.scrollLeft; car.style.cursor = 'grabbing'; });
       const end = () => { down = false; car.style.cursor = 'grab'; };
       car.addEventListener('pointerup', end);
       car.addEventListener('pointerleave', end);
-      car.addEventListener('pointermove', (e) => {
-        if (!down) return;
-        car.scrollLeft = startScroll - (e.clientX - startX);
-      });
+      car.addEventListener('pointermove', (e) => { if (!down) return; car.scrollLeft = startScroll - (e.clientX - startX); });
     })();
   </script>
 </body>
