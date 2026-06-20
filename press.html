@@ -80,15 +80,11 @@
     </header>
     <div class="grid md:grid-cols-2 gap-12 md:gap-20 max-w-5xl">
       <a href="press/ad-middle-east.html" class="reveal group block fade hover:opacity-60">
-        <blockquote class="text-xl md:text-2xl font-extralight leading-relaxed text-charcoal">
-          &ldquo;Recognized by AD Magazine as one of the most remarkable ceramists of our time, acknowledging her significant contributions to the field.&rdquo;
-        </blockquote>
+        <blockquote class="text-xl md:text-2xl font-extralight leading-relaxed text-charcoal">&ldquo;Recognized by AD Magazine as one of the most remarkable ceramists of our time, acknowledging her significant contributions to the field.&rdquo;</blockquote>
         <figcaption class="mt-6 text-[11px] uppercase tracking-wide2 text-mute">AD Middle East — Featured Profile&nbsp;&nbsp;→</figcaption>
       </a>
       <a href="press/interior-design-magazine.html" class="reveal group block md:border-l md:border-line md:pl-20 fade hover:opacity-60">
-        <p class="text-xl md:text-2xl font-extralight leading-relaxed text-charcoal">
-          An editorial feature exploring the materials, process and quiet philosophy behind Atelier Nadeen.
-        </p>
+        <p class="text-xl md:text-2xl font-extralight leading-relaxed text-charcoal">An editorial feature exploring the materials, process and quiet philosophy behind Atelier Nadeen.</p>
         <figcaption class="mt-6 text-[11px] uppercase tracking-wide2 text-mute">Interior Design Magazine — Editorial Feature&nbsp;&nbsp;→</figcaption>
       </a>
     </div>
@@ -138,7 +134,7 @@
       if(lb&&Object.keys(GALLERIES).length){
         var lbImg=document.getElementById('lbImg'),lbTitle=document.getElementById('lbTitle'),lbCount=document.getElementById('lbCount'),lbStrip=document.getElementById('lbStrip');
         var cur=null,idx=0;
-        function render(){var g=GALLERIES[cur];if(!g)return;lbImg.style.opacity=0;var src=g.images[idx];var im=new Image();im.onload=function(){lbImg.src=src;lbImg.style.opacity=1;};im.src=src;lbTitle.textContent=g.title;lbCount.textContent=(idx+1)+' / '+g.images.length;Array.prototype.forEach.call(lbStrip.children,function(c,i){c.style.opacity=(i===idx)?'1':'0.4';});var act=lbStrip.children[idx];if(act&&act.scrollIntoView)act.scrollIntoView({inline:'center',block:'nearest'});}
+        function render(){var g=GALLERIES[cur];if(!g)return;lbImg.style.opacity=0;var src=g.images[idx];var im=new Image();im.onload=function(){lbImg.src=src;lbImg.style.opacity=1;};im.src=src;lbTitle.textContent=g.title;lbCount.textContent=(idx+1)+' / '+g.images.length;Array.prototype.forEach.call(lbStrip.children,function(c,i){c.style.opacity=(i===idx)?'1':'0.4';});}
         function buildStrip(){var g=GALLERIES[cur];lbStrip.innerHTML='';if(g.images.length<2){lbStrip.style.display='none';return;}lbStrip.style.display='flex';g.images.forEach(function(src,i){var b=document.createElement('button');b.className='shrink-0 fade';b.style.opacity=(i===idx)?'1':'0.4';b.innerHTML='<img src="'+src+'" class="h-14 w-14 object-cover" alt="" />';b.addEventListener('click',function(){idx=i;render();});lbStrip.appendChild(b);});}
         function open(k,i){cur=k;idx=i||0;buildStrip();render();lb.classList.add('open');lb.classList.remove('closed');document.body.style.overflow='hidden';}
         function close(){lb.classList.remove('open');lb.classList.add('closed');document.body.style.overflow='';}
@@ -149,9 +145,7 @@
         document.getElementById('lbPrev').addEventListener('click',prev);
         document.addEventListener('keydown',function(e){if(lb.classList.contains('open')){if(e.key==='Escape')close();else if(e.key==='ArrowRight')next();else if(e.key==='ArrowLeft')prev();}else if(e.key==='Escape')setMenu(false);});
         Array.prototype.forEach.call(document.querySelectorAll('[data-gallery]'),function(el){var k=el.getAttribute('data-gallery'),di=parseInt(el.getAttribute('data-index')||'0',10);el.addEventListener('click',function(){open(k,di);});el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(k,di);}});});
-      } else {
-        document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
-      }
+      } else { document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);}); }
     })();
   </script>
 </body>
