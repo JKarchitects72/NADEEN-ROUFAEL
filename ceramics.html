@@ -255,7 +255,7 @@
           var b=document.createElement('button');
           if(c.caps&&c.caps[i]){
             b.className='shrink-0 h-full flex flex-col items-center justify-center gap-2 outline-none';
-            b.innerHTML='<img src="'+src+'" class="min-h-0 flex-1 w-auto max-w-none object-contain bg-mist" alt="" /><span class="shrink-0 text-[10px] uppercase tracking-wide2 text-mute">'+c.caps[i]+'</span>';
+            b.innerHTML='<img src="'+src+'" class="h-[calc(100%-1.75rem)] w-auto max-w-none object-contain bg-mist" alt="" /><span class="shrink-0 text-[10px] uppercase tracking-wide2 text-mute">'+c.caps[i]+'</span>';
           } else {
             b.className='shrink-0 h-full flex items-center outline-none';
             b.innerHTML='<img src="'+src+'" class="h-full w-auto max-w-none object-contain bg-mist" alt="" />';
