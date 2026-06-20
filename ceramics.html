@@ -1,0 +1,2154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ceramics — Nadeen Rouphael</title>
+  <meta name="description" content="Nadeen Rouphael — interior designer and ceramic artist, founder of Atelier Nadeen, Beirut, Lebanon." />
+  <link rel="icon" href="website%20logo.jpeg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { ink:'#000000', charcoal:'#111111', mute:'#6b6b6b', line:'#e7e7e7', paper:'#ffffff', mist:'#f7f7f7' },
+      fontFamily: { sans: ['Inter','Helvetica Neue','Arial','sans-serif'] },
+      letterSpacing: { brand:'0.32em', wide2:'0.22em' },
+    } } };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    .fade { transition: opacity 700ms cubic-bezier(0.25,0.1,0.25,1); }
+    .nav-link { transition: color 600ms cubic-bezier(0.25,0.1,0.25,1), opacity 600ms ease; }
+    .nav-link:hover { opacity: 0.45; }
+    .img-fade { transition: opacity 900ms cubic-bezier(0.22,0.61,0.36,1); }
+    .img-wrap:hover .img-fade { opacity: 0.82; }
+    .reveal { opacity:0; transform: translateY(16px); transition: opacity 1000ms cubic-bezier(0.22,0.61,0.36,1), transform 1000ms cubic-bezier(0.22,0.61,0.36,1); }
+    .reveal.is-visible { opacity:1; transform:none; }
+    .no-scrollbar::-webkit-scrollbar { display:none; } .no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+    .overlay { transition: opacity 600ms ease, visibility 600ms ease; }
+    .overlay.closed { opacity:0; visibility:hidden; pointer-events:none; }
+    .overlay.open { opacity:1; visibility:visible; pointer-events:auto; }
+    .lb { transition: opacity 500ms ease, visibility 500ms ease; }
+    .lb.closed { opacity:0; visibility:hidden; pointer-events:none; }
+    .lb.open { opacity:1; visibility:visible; pointer-events:auto; }
+    .lb-img { transition: opacity 450ms ease; }
+    @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;transition:none;} html{scroll-behavior:auto;} }
+  </style>
+</head>
+<body class="bg-paper text-charcoal font-sans antialiased min-h-screen flex flex-col selection:bg-black selection:text-white">  <header class="sticky top-0 z-50 bg-paper/90 backdrop-blur-sm border-b border-line">
+    <nav class="mx-auto max-w-[1500px] px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
+      <a href="index.html" class="nav-link flex items-center gap-3 text-ink">
+        <img src="website%20logo.jpeg" alt="Atelier Nadeen mark" class="h-7 w-7 md:h-8 md:w-8 object-contain" />
+        <span class="text-xs md:text-sm font-light uppercase tracking-brand">Nadeen&nbsp;Rouphael</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-9 lg:gap-12 text-[11px] uppercase tracking-wide2 font-light text-charcoal">
+        <li><a href="ceramics.html" class="nav-link border-b border-ink pb-0.5">Ceramics</a></li>
+        <li><a href="paintings.html" class="nav-link">Paintings</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="news.html" class="nav-link">News &amp; Exhibitions</a></li>
+        <li><a href="press.html" class="nav-link">Media &amp; Press</a></li>
+      </ul>
+      <button id="menuOpen" aria-label="Open menu" class="md:hidden flex flex-col gap-[6px] w-7 group">
+        <span class="block h-px w-7 bg-ink fade group-hover:opacity-50"></span>
+        <span class="block h-px w-7 bg-ink fade group-hover:opacity-50"></span>
+      </button>
+    </nav>
+  </header>
+  <div id="overlay" class="overlay closed fixed inset-0 z-[60] bg-paper flex flex-col">
+    <div class="flex items-center justify-between h-16 px-6 border-b border-line">
+      <span class="text-xs font-light uppercase tracking-brand">Atelier Nadeen</span>
+      <button id="menuClose" aria-label="Close menu" class="relative w-7 h-7">
+        <span class="absolute left-0 top-1/2 h-px w-7 bg-ink rotate-45"></span>
+        <span class="absolute left-0 top-1/2 h-px w-7 bg-ink -rotate-45"></span>
+      </button>
+    </div>
+    <ul class="flex-1 flex flex-col items-center justify-center gap-8 text-2xl font-light uppercase tracking-wide2 text-charcoal">
+      <li><a href="ceramics.html" class="nav-link overlay-link">Ceramics</a></li>
+      <li><a href="paintings.html" class="nav-link overlay-link">Paintings</a></li>
+      <li><a href="about.html" class="nav-link overlay-link">About</a></li>
+      <li><a href="news.html" class="nav-link overlay-link">News &amp; Exhibitions</a></li>
+      <li><a href="press.html" class="nav-link overlay-link">Media &amp; Press</a></li>
+    </ul>
+  </div>
+  <main class="flex-1 px-6 md:px-10 pt-16 md:pt-24 pb-10">
+    <header class="reveal text-center mb-16 md:mb-28">
+      <p class="text-[11px] uppercase tracking-wide2 text-mute mb-4">01 — Collection</p>
+      <h1 class="text-4xl md:text-6xl font-extralight tracking-tight text-ink">Ceramics</h1>
+    </header>
+    <section class="mb-24 md:mb-36">
+      <header class="reveal text-center mb-10 md:mb-16">
+        <p class="text-[11px] uppercase tracking-wide2 text-mute mb-3">Collection One</p>
+        <h2 class="text-2xl md:text-4xl font-extralight tracking-tight text-ink max-w-2xl mx-auto">Mebuki Garden</h2>
+      </header>
+      <div class="mx-auto grid grid-cols-3 gap-3 md:gap-4 w-[90vw] md:w-[62vw] lg:w-[43vw]">
+        <figure data-gallery="one" data-index="0" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%281%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="1" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%282%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="2" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%283%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="3" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%284%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="4" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%285%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="5" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%286%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="6" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%287%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="7" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%288%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="8" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%289%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="9" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2810%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="10" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2811%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="11" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2812%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="12" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2813%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="13" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2814%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="14" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2815%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="15" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2816%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="16" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2817%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="17" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2818%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="18" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2819%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="19" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2820%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="20" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2821%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="21" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2822%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="22" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2823%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="23" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2824%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="24" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2825%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="one" data-index="25" tabindex="0" role="button" aria-label="Mebuki Garden — 01"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MEBUKI%20GARDEN%20%2826%29.webp" alt="Mebuki Garden — 01" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+      </div>
+    </section>
+    <section class="mb-24 md:mb-36">
+      <header class="reveal text-center mb-10 md:mb-16">
+        <p class="text-[11px] uppercase tracking-wide2 text-mute mb-3">Collection Two</p>
+        <h2 class="text-2xl md:text-4xl font-extralight tracking-tight text-ink max-w-2xl mx-auto">Porcelain</h2>
+      </header>
+      <div class="mx-auto grid grid-cols-3 gap-3 md:gap-4 w-[90vw] md:w-[62vw] lg:w-[43vw]">
+        <figure data-gallery="two" data-index="0" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00001.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="1" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00002.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="2" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00003.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="3" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00004.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="4" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00005.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="5" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00006.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="6" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00007.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="7" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00008.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="8" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00009.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="9" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00010.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="10" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00011.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="11" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00012.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="12" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00013.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="13" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00014.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="14" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00015.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="15" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00016.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="16" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00017.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="17" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00018.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="18" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00019.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="19" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00020.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="20" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00021.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="21" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00022.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="22" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00023.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="23" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00024.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="24" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00025.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="25" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00026.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="26" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00027.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="27" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00028.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="28" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00029.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="29" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00030.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="30" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00031.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="31" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00032.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="32" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00033.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="33" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00034.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="34" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00035.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="35" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00036.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="36" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00037.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="37" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00038.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="38" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00039.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="39" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00040.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="40" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%202/image00041.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="41" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%204/PHOTO-2021-03-04-15-36-35.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="42" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%204/PHOTO-2021-03-04-15-36-36%202.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="43" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%204/PHOTO-2021-03-04-15-36-36.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="44" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%204/PHOTO-2021-03-04-15-36-37%202.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="45" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%204/PHOTO-2021-03-04-15-36-37.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="46" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%204/PHOTO-2021-03-04-15-36-38%202.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="47" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%204/PHOTO-2021-03-04-15-36-38%203.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="48" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%204/PHOTO-2021-03-04-15-36-38.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="49" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%204/PHOTO-2021-03-04-15-36-39.jpg" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="50" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="cup%20%281%29.webp" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="51" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="cup%20%282%29.webp" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="52" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="cup%20%283%29.webp" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="53" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="cup%20%284%29.webp" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="54" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="cup%20%285%29.webp" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="two" data-index="55" tabindex="0" role="button" aria-label="Porcelain — 02"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="cup%20%286%29.webp" alt="Porcelain — 02" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+      </div>
+    </section>
+    <section class="mb-24 md:mb-36">
+      <header class="reveal text-center mb-10 md:mb-16">
+        <p class="text-[11px] uppercase tracking-wide2 text-mute mb-3">Collection Three</p>
+        <h2 class="text-2xl md:text-4xl font-extralight tracking-tight text-ink max-w-2xl mx-auto">Bonhomme</h2>
+      </header>
+      <div class="mx-auto grid grid-cols-3 gap-3 md:gap-4 w-[90vw] md:w-[62vw] lg:w-[43vw]">
+        <figure data-gallery="three" data-index="0" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%281%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="1" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%282%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="2" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%283%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="3" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%284%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="4" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%285%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="5" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%286%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="6" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%287%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="7" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%288%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="8" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%289%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="9" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2810%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="10" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2811%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="11" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2812%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="12" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2813%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="13" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2814%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="14" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2815%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="15" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2816%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="16" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2817%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="17" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2818%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="18" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2819%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="19" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2820%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="20" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2821%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="21" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2822%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="22" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2823%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="23" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2824%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="24" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2825%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="25" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2826%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="26" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2827%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="27" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2828%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="28" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2829%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="29" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2830%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="30" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2831%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="31" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2832%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="32" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2833%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="33" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2834%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="34" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2835%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="35" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2836%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="36" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2837%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="37" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2838%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="38" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2839%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="39" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2840%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="40" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2841%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="41" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2842%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="42" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2843%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="43" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2844%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="44" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2845%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="45" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2846%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="46" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2847%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="47" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2848%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="48" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2849%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="49" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2850%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="50" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2851%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="51" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2852%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="52" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2853%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="53" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2854%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="54" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2855%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="55" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2856%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="56" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2857%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="57" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2858%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="58" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2859%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="59" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2860%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="60" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2861%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="61" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2862%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="62" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2863%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="63" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2864%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="64" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2865%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="65" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2866%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="66" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2867%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="67" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2868%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="68" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2869%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="69" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2870%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="70" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2871%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="71" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2872%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="72" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2873%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="73" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2874%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="three" data-index="74" tabindex="0" role="button" aria-label="Bonhomme — 03"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="bonhomme%20%2875%29.webp" alt="Bonhomme — 03" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+      </div>
+    </section>
+    <section class="mb-24 md:mb-36">
+      <header class="reveal text-center mb-10 md:mb-16">
+        <p class="text-[11px] uppercase tracking-wide2 text-mute mb-3">Collection Four</p>
+        <h2 class="text-2xl md:text-4xl font-extralight tracking-tight text-ink max-w-2xl mx-auto">Sapience & Serene</h2>
+      </header>
+      <div class="mx-auto grid grid-cols-3 gap-3 md:gap-4 w-[90vw] md:w-[62vw] lg:w-[43vw]">
+        <figure data-gallery="four" data-index="0" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20%285%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="1" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20%286%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="2" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%281%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="3" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%282%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="4" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%283%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="5" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%284%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="6" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%285%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="7" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%286%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="8" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%287%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="9" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%288%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="10" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%289%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="11" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%2810%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="12" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%2811%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="13" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%2812%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="14" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%2813%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="15" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%2814%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="16" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SAPIENCE%20SERENCE%20%2815%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="17" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SERENE%20%281%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="18" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SERENE%20%282%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="19" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SERENE%20%283%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="20" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SERENE%20%284%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="21" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SERENE%20%285%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="22" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SERENE%20%286%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="23" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SERENE%20%287%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="four" data-index="24" tabindex="0" role="button" aria-label="Sapience & Serene — 04"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SERENE%20%288%29.webp" alt="Sapience & Serene — 04" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+      </div>
+    </section>
+    <section class="mb-24 md:mb-36">
+      <header class="reveal text-center mb-10 md:mb-16">
+        <p class="text-[11px] uppercase tracking-wide2 text-mute mb-3">Collection Five</p>
+        <h2 class="text-2xl md:text-4xl font-extralight tracking-tight text-ink max-w-2xl mx-auto">Mirror, Mirror I & Mirror II</h2>
+      </header>
+      <div class="mx-auto grid grid-cols-3 gap-3 md:gap-4 w-[90vw] md:w-[62vw] lg:w-[43vw]">
+        <figure data-gallery="five" data-index="0" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%202%20%281%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="1" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%202%20%282%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="2" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%202%20%283%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="3" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%202%20%284%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="4" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%202%20%285%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="5" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%202%20%286%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="6" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%202%20%287%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="7" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%202%20%288%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="8" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%20%281%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="9" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%20%282%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="10" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%20%283%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="11" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%20%284%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="12" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%20%285%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="13" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%20%286%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="14" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%20%287%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="15" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="MIRROR%20%288%29.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="five" data-index="16" tabindex="0" role="button" aria-label="Mirror, Mirror I & Mirror II — 05"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Mirror.webp" alt="Mirror, Mirror I & Mirror II — 05" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+      </div>
+    </section>
+    <section class="mb-24 md:mb-36">
+      <header class="reveal text-center mb-10 md:mb-16">
+        <p class="text-[11px] uppercase tracking-wide2 text-mute mb-3">Collection Six</p>
+        <h2 class="text-2xl md:text-4xl font-extralight tracking-tight text-ink max-w-2xl mx-auto">Art de la Table</h2>
+      </header>
+      <div class="mx-auto grid grid-cols-3 gap-3 md:gap-4 w-[90vw] md:w-[62vw] lg:w-[43vw]">
+        <figure data-gallery="six" data-index="0" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%281%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="1" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%282%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="2" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%283%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="3" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%284%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="4" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%285%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="5" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%286%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="6" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%287%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="7" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%288%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="8" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%289%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="9" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2810%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="10" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2811%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="11" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2812%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="12" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2813%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="13" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2814%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="14" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2815%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="15" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2816%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="16" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2817%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="17" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2818%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="18" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2819%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="19" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2820%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="20" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2821%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="six" data-index="21" tabindex="0" role="button" aria-label="Art de la Table — 06"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ART%20DE%20LA%20TABLE%20%2822%29.webp" alt="Art de la Table — 06" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+      </div>
+    </section>
+    <section class="mb-24 md:mb-36">
+      <header class="reveal text-center mb-10 md:mb-16">
+        <p class="text-[11px] uppercase tracking-wide2 text-mute mb-3">Collection Seven</p>
+        <h2 class="text-2xl md:text-4xl font-extralight tracking-tight text-ink max-w-2xl mx-auto">Orange, Blue, Yellow, Spectrum & Rollercoaster</h2>
+      </header>
+      <div class="mx-auto grid grid-cols-3 gap-3 md:gap-4 w-[90vw] md:w-[62vw] lg:w-[43vw]">
+        <figure data-gallery="seven" data-index="0" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="BLUE.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="1" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="ORANGE.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="2" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%281%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="3" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%282%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="4" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%283%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="5" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%284%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="6" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%285%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="7" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%286%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="8" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%287%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="9" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%288%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="10" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%289%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="11" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2810%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="12" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2811%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="13" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2812%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="14" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2813%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="15" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2814%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="16" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2815%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="17" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2816%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="18" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2817%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="19" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2818%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="20" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2819%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="21" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2820%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="22" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2821%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="23" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2822%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="24" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2823%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="25" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="rollercoaster%20%2824%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="26" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SPECTRUM%20%281%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="27" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="SPECTRUM%20%282%29.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="seven" data-index="28" tabindex="0" role="button" aria-label="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="YELLOW.webp" alt="Orange, Blue, Yellow, Spectrum & Rollercoaster — 07" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+      </div>
+    </section>
+    <section class="mb-24 md:mb-36">
+      <header class="reveal text-center mb-10 md:mb-16">
+        <p class="text-[11px] uppercase tracking-wide2 text-mute mb-3">Collection Eight</p>
+        <h2 class="text-2xl md:text-4xl font-extralight tracking-tight text-ink max-w-2xl mx-auto">Lighting</h2>
+      </header>
+      <div class="mx-auto grid grid-cols-3 gap-3 md:gap-4 w-[90vw] md:w-[62vw] lg:w-[43vw]">
+        <figure data-gallery="eight" data-index="0" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%281%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="1" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%284%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="2" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%285%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="3" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%286%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="4" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%287%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="5" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%288%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="6" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%289%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="7" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2810%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="8" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2811%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="9" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2812%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="10" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2813%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="11" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2814%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="12" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2815%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="13" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2816%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="14" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2817%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="15" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2818%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="16" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2819%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="17" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2820%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="18" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2821%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="19" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2822%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="20" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2823%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="21" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2824%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="22" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2825%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="23" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2826%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="24" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2827%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="25" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2828%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="26" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2829%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="27" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2830%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="28" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2831%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="29" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2832%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="30" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2833%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="31" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2834%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="32" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2835%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="33" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2836%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="34" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2837%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="35" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2838%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="36" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2839%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="37" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2840%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="38" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2841%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="eight" data-index="39" tabindex="0" role="button" aria-label="Lighting — 08"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="WALL%20LIGHTING%20FIXTURE%20%2842%29.webp" alt="Lighting — 08" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+      </div>
+    </section>
+    <section class="mb-24 md:mb-36">
+      <header class="reveal text-center mb-10 md:mb-16">
+        <p class="text-[11px] uppercase tracking-wide2 text-mute mb-3">Collection Nine</p>
+        <h2 class="text-2xl md:text-4xl font-extralight tracking-tight text-ink max-w-2xl mx-auto">Arci, Media, Ant & Hill Bun</h2>
+      </header>
+      <div class="mx-auto grid grid-cols-3 gap-3 md:gap-4 w-[90vw] md:w-[62vw] lg:w-[43vw]">
+        <figure data-gallery="nine" data-index="0" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/ant%201.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="1" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/ant%202.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="2" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/ant%203.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="3" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/ant%204.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="4" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/ant%205.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="5" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/ant%206.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="6" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/ant%207.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="7" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/ant%208.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="8" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/ant%209.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="9" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/ant%2010.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="10" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/ant.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="11" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/arci%201.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="12" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/arci%202.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="13" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/arci%203.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="14" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/arci%204.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="15" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/arci%205.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="16" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/arci.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="17" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/hill%20bun%201.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="18" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/hill%20bun%202.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="19" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/hill%20bun%203.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="20" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/hill%20bun%204.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="21" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/hill%20bun%205.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="22" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/hill%20bun%206.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="23" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/hill%20bun%207.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="24" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/hill%20bun%208.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="25" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/hill%20bun.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="26" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/media1.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="27" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/media%202.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="28" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/media%203.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+        <figure data-gallery="nine" data-index="29" tabindex="0" role="button" aria-label="Arci, Media, Ant & Hill Bun — 09"
+                 class="reveal img-wrap group cursor-pointer outline-none">
+          <div class="overflow-hidden bg-mist aspect-square">
+            <img src="Collection%200/media%204.jpg" alt="Arci, Media, Ant & Hill Bun — 09" loading="lazy" class="img-fade w-full h-full object-cover" />
+          </div>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-auto border-t border-line bg-paper">
+    <div class="mx-auto max-w-[1500px] px-6 md:px-10 py-14 grid gap-10 md:grid-cols-3 md:items-start">
+      <div class="flex items-center gap-3">
+        <img src="website%20logo.jpeg" alt="Atelier Nadeen mark" class="h-8 w-8 object-contain" />
+        <div>
+          <p class="text-xs font-light uppercase tracking-brand text-ink mb-1">Atelier Nadeen</p>
+          <p class="text-sm font-light text-mute">Beirut, Lebanon</p>
+        </div>
+      </div>
+      <div>
+        <p class="text-[11px] uppercase tracking-wide2 text-mute mb-4">Contact</p>
+        <div class="space-y-2 text-sm font-light">
+          <a href="mailto:roufaelnadine@gmail.com" class="nav-link block text-charcoal">roufaelnadine@gmail.com</a>
+          <a href="tel:+9613270598" class="nav-link block text-charcoal">+961 3 270 598</a>
+          <a href="https://www.instagram.com/nadeenroufael" target="_blank" rel="noopener noreferrer" class="nav-link inline-flex items-center gap-2 text-charcoal mt-1"><svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.62c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.24-2.19.41-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.17.42-.36 1.04-.41 2.19-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05 1.15.24 1.77.41 2.19.21.55.47.94.88 1.35.41.41.8.67 1.35.88.42.17 1.04.36 2.19.41 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.24 2.19-.41.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.17-.42.36-1.04.41-2.19.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.24-1.77-.41-2.19a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.42-.17-1.04-.36-2.19-.41-1.24-.06-1.61-.07-4.76-.07Zm0 2.76a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6Zm0 8.74a3.44 3.44 0 1 0 0-6.88 3.44 3.44 0 0 0 0 6.88Zm6.74-8.94a1.24 1.24 0 1 1-2.48 0 1.24 1.24 0 0 1 2.48 0Z"/></svg><span>@nadeenroufael</span></a>
+        </div>
+      </div>
+      <div class="md:text-right">
+        <ul class="flex flex-wrap md:justify-end gap-x-8 gap-y-2 text-[11px] uppercase tracking-wide2 text-charcoal mb-6">
+          <li><a href="ceramics.html" class="nav-link">Ceramics</a></li>
+          <li><a href="paintings.html" class="nav-link">Paintings</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="news.html" class="nav-link">News</a></li>
+          <li><a href="press.html" class="nav-link">Press</a></li>
+        </ul>
+        <p class="text-[11px] uppercase tracking-wide2 text-mute">© <span class="yr"></span> Nadeen Rouphael</p>
+      </div>
+    </div>
+  </footer>
+  <div id="lightbox" class="lb closed fixed inset-0 z-[70] bg-paper flex flex-col">
+    <div class="flex items-center justify-between h-16 px-6 border-b border-line shrink-0">
+      <div class="flex items-baseline gap-4">
+        <span id="lbTitle" class="text-xs font-light uppercase tracking-brand text-ink"></span>
+        <span id="lbCount" class="text-[11px] uppercase tracking-wide2 text-mute"></span>
+      </div>
+      <button id="lbClose" aria-label="Close gallery" class="relative w-7 h-7">
+        <span class="absolute left-0 top-1/2 h-px w-7 bg-ink rotate-45"></span>
+        <span class="absolute left-0 top-1/2 h-px w-7 bg-ink -rotate-45"></span>
+      </button>
+    </div>
+    <div class="relative flex-1 min-h-0 flex items-center justify-center px-4 md:px-20 py-6">
+      <button id="lbPrev" aria-label="Previous" class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-2xl font-extralight text-charcoal nav-link">&#8249;</button>
+      <img id="lbImg" class="lb-img max-h-full max-w-full object-contain" alt="" />
+      <button id="lbNext" aria-label="Next" class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-2xl font-extralight text-charcoal nav-link">&#8250;</button>
+    </div>
+    <div id="lbStrip" class="no-scrollbar shrink-0 flex gap-2 overflow-x-auto px-4 md:px-20 pb-5 pt-1"></div>
+  </div>
+  <script>
+    (function(){
+      'use strict';
+      var GALLERIES={"one": {"title": "Mebuki Garden", "images": ["MEBUKI%20GARDEN%20%281%29.webp", "MEBUKI%20GARDEN%20%282%29.webp", "MEBUKI%20GARDEN%20%283%29.webp", "MEBUKI%20GARDEN%20%284%29.webp", "MEBUKI%20GARDEN%20%285%29.webp", "MEBUKI%20GARDEN%20%286%29.webp", "MEBUKI%20GARDEN%20%287%29.webp", "MEBUKI%20GARDEN%20%288%29.webp", "MEBUKI%20GARDEN%20%289%29.webp", "MEBUKI%20GARDEN%20%2810%29.webp", "MEBUKI%20GARDEN%20%2811%29.webp", "MEBUKI%20GARDEN%20%2812%29.webp", "MEBUKI%20GARDEN%20%2813%29.webp", "MEBUKI%20GARDEN%20%2814%29.webp", "MEBUKI%20GARDEN%20%2815%29.webp", "MEBUKI%20GARDEN%20%2816%29.webp", "MEBUKI%20GARDEN%20%2817%29.webp", "MEBUKI%20GARDEN%20%2818%29.webp", "MEBUKI%20GARDEN%20%2819%29.webp", "MEBUKI%20GARDEN%20%2820%29.webp", "MEBUKI%20GARDEN%20%2821%29.webp", "MEBUKI%20GARDEN%20%2822%29.webp", "MEBUKI%20GARDEN%20%2823%29.webp", "MEBUKI%20GARDEN%20%2824%29.webp", "MEBUKI%20GARDEN%20%2825%29.webp", "MEBUKI%20GARDEN%20%2826%29.webp"]}, "two": {"title": "Porcelain", "images": ["Collection%202/image00001.jpg", "Collection%202/image00002.jpg", "Collection%202/image00003.jpg", "Collection%202/image00004.jpg", "Collection%202/image00005.jpg", "Collection%202/image00006.jpg", "Collection%202/image00007.jpg", "Collection%202/image00008.jpg", "Collection%202/image00009.jpg", "Collection%202/image00010.jpg", "Collection%202/image00011.jpg", "Collection%202/image00012.jpg", "Collection%202/image00013.jpg", "Collection%202/image00014.jpg", "Collection%202/image00015.jpg", "Collection%202/image00016.jpg", "Collection%202/image00017.jpg", "Collection%202/image00018.jpg", "Collection%202/image00019.jpg", "Collection%202/image00020.jpg", "Collection%202/image00021.jpg", "Collection%202/image00022.jpg", "Collection%202/image00023.jpg", "Collection%202/image00024.jpg", "Collection%202/image00025.jpg", "Collection%202/image00026.jpg", "Collection%202/image00027.jpg", "Collection%202/image00028.jpg", "Collection%202/image00029.jpg", "Collection%202/image00030.jpg", "Collection%202/image00031.jpg", "Collection%202/image00032.jpg", "Collection%202/image00033.jpg", "Collection%202/image00034.jpg", "Collection%202/image00035.jpg", "Collection%202/image00036.jpg", "Collection%202/image00037.jpg", "Collection%202/image00038.jpg", "Collection%202/image00039.jpg", "Collection%202/image00040.jpg", "Collection%202/image00041.jpg", "Collection%204/PHOTO-2021-03-04-15-36-35.jpg", "Collection%204/PHOTO-2021-03-04-15-36-36%202.jpg", "Collection%204/PHOTO-2021-03-04-15-36-36.jpg", "Collection%204/PHOTO-2021-03-04-15-36-37%202.jpg", "Collection%204/PHOTO-2021-03-04-15-36-37.jpg", "Collection%204/PHOTO-2021-03-04-15-36-38%202.jpg", "Collection%204/PHOTO-2021-03-04-15-36-38%203.jpg", "Collection%204/PHOTO-2021-03-04-15-36-38.jpg", "Collection%204/PHOTO-2021-03-04-15-36-39.jpg", "cup%20%281%29.webp", "cup%20%282%29.webp", "cup%20%283%29.webp", "cup%20%284%29.webp", "cup%20%285%29.webp", "cup%20%286%29.webp"]}, "three": {"title": "Bonhomme", "images": ["bonhomme%20%281%29.webp", "bonhomme%20%282%29.webp", "bonhomme%20%283%29.webp", "bonhomme%20%284%29.webp", "bonhomme%20%285%29.webp", "bonhomme%20%286%29.webp", "bonhomme%20%287%29.webp", "bonhomme%20%288%29.webp", "bonhomme%20%289%29.webp", "bonhomme%20%2810%29.webp", "bonhomme%20%2811%29.webp", "bonhomme%20%2812%29.webp", "bonhomme%20%2813%29.webp", "bonhomme%20%2814%29.webp", "bonhomme%20%2815%29.webp", "bonhomme%20%2816%29.webp", "bonhomme%20%2817%29.webp", "bonhomme%20%2818%29.webp", "bonhomme%20%2819%29.webp", "bonhomme%20%2820%29.webp", "bonhomme%20%2821%29.webp", "bonhomme%20%2822%29.webp", "bonhomme%20%2823%29.webp", "bonhomme%20%2824%29.webp", "bonhomme%20%2825%29.webp", "bonhomme%20%2826%29.webp", "bonhomme%20%2827%29.webp", "bonhomme%20%2828%29.webp", "bonhomme%20%2829%29.webp", "bonhomme%20%2830%29.webp", "bonhomme%20%2831%29.webp", "bonhomme%20%2832%29.webp", "bonhomme%20%2833%29.webp", "bonhomme%20%2834%29.webp", "bonhomme%20%2835%29.webp", "bonhomme%20%2836%29.webp", "bonhomme%20%2837%29.webp", "bonhomme%20%2838%29.webp", "bonhomme%20%2839%29.webp", "bonhomme%20%2840%29.webp", "bonhomme%20%2841%29.webp", "bonhomme%20%2842%29.webp", "bonhomme%20%2843%29.webp", "bonhomme%20%2844%29.webp", "bonhomme%20%2845%29.webp", "bonhomme%20%2846%29.webp", "bonhomme%20%2847%29.webp", "bonhomme%20%2848%29.webp", "bonhomme%20%2849%29.webp", "bonhomme%20%2850%29.webp", "bonhomme%20%2851%29.webp", "bonhomme%20%2852%29.webp", "bonhomme%20%2853%29.webp", "bonhomme%20%2854%29.webp", "bonhomme%20%2855%29.webp", "bonhomme%20%2856%29.webp", "bonhomme%20%2857%29.webp", "bonhomme%20%2858%29.webp", "bonhomme%20%2859%29.webp", "bonhomme%20%2860%29.webp", "bonhomme%20%2861%29.webp", "bonhomme%20%2862%29.webp", "bonhomme%20%2863%29.webp", "bonhomme%20%2864%29.webp", "bonhomme%20%2865%29.webp", "bonhomme%20%2866%29.webp", "bonhomme%20%2867%29.webp", "bonhomme%20%2868%29.webp", "bonhomme%20%2869%29.webp", "bonhomme%20%2870%29.webp", "bonhomme%20%2871%29.webp", "bonhomme%20%2872%29.webp", "bonhomme%20%2873%29.webp", "bonhomme%20%2874%29.webp", "bonhomme%20%2875%29.webp"]}, "four": {"title": "Sapience & Serene", "images": ["SAPIENCE%20%285%29.webp", "SAPIENCE%20%286%29.webp", "SAPIENCE%20SERENCE%20%281%29.webp", "SAPIENCE%20SERENCE%20%282%29.webp", "SAPIENCE%20SERENCE%20%283%29.webp", "SAPIENCE%20SERENCE%20%284%29.webp", "SAPIENCE%20SERENCE%20%285%29.webp", "SAPIENCE%20SERENCE%20%286%29.webp", "SAPIENCE%20SERENCE%20%287%29.webp", "SAPIENCE%20SERENCE%20%288%29.webp", "SAPIENCE%20SERENCE%20%289%29.webp", "SAPIENCE%20SERENCE%20%2810%29.webp", "SAPIENCE%20SERENCE%20%2811%29.webp", "SAPIENCE%20SERENCE%20%2812%29.webp", "SAPIENCE%20SERENCE%20%2813%29.webp", "SAPIENCE%20SERENCE%20%2814%29.webp", "SAPIENCE%20SERENCE%20%2815%29.webp", "SERENE%20%281%29.webp", "SERENE%20%282%29.webp", "SERENE%20%283%29.webp", "SERENE%20%284%29.webp", "SERENE%20%285%29.webp", "SERENE%20%286%29.webp", "SERENE%20%287%29.webp", "SERENE%20%288%29.webp"]}, "five": {"title": "Mirror, Mirror I & Mirror II", "images": ["MIRROR%202%20%281%29.webp", "MIRROR%202%20%282%29.webp", "MIRROR%202%20%283%29.webp", "MIRROR%202%20%284%29.webp", "MIRROR%202%20%285%29.webp", "MIRROR%202%20%286%29.webp", "MIRROR%202%20%287%29.webp", "MIRROR%202%20%288%29.webp", "MIRROR%20%281%29.webp", "MIRROR%20%282%29.webp", "MIRROR%20%283%29.webp", "MIRROR%20%284%29.webp", "MIRROR%20%285%29.webp", "MIRROR%20%286%29.webp", "MIRROR%20%287%29.webp", "MIRROR%20%288%29.webp", "Mirror.webp"]}, "six": {"title": "Art de la Table", "images": ["ART%20DE%20LA%20TABLE%20%281%29.webp", "ART%20DE%20LA%20TABLE%20%282%29.webp", "ART%20DE%20LA%20TABLE%20%283%29.webp", "ART%20DE%20LA%20TABLE%20%284%29.webp", "ART%20DE%20LA%20TABLE%20%285%29.webp", "ART%20DE%20LA%20TABLE%20%286%29.webp", "ART%20DE%20LA%20TABLE%20%287%29.webp", "ART%20DE%20LA%20TABLE%20%288%29.webp", "ART%20DE%20LA%20TABLE%20%289%29.webp", "ART%20DE%20LA%20TABLE%20%2810%29.webp", "ART%20DE%20LA%20TABLE%20%2811%29.webp", "ART%20DE%20LA%20TABLE%20%2812%29.webp", "ART%20DE%20LA%20TABLE%20%2813%29.webp", "ART%20DE%20LA%20TABLE%20%2814%29.webp", "ART%20DE%20LA%20TABLE%20%2815%29.webp", "ART%20DE%20LA%20TABLE%20%2816%29.webp", "ART%20DE%20LA%20TABLE%20%2817%29.webp", "ART%20DE%20LA%20TABLE%20%2818%29.webp", "ART%20DE%20LA%20TABLE%20%2819%29.webp", "ART%20DE%20LA%20TABLE%20%2820%29.webp", "ART%20DE%20LA%20TABLE%20%2821%29.webp", "ART%20DE%20LA%20TABLE%20%2822%29.webp"]}, "seven": {"title": "Orange, Blue, Yellow, Spectrum & Rollercoaster", "images": ["BLUE.webp", "ORANGE.webp", "rollercoaster%20%281%29.webp", "rollercoaster%20%282%29.webp", "rollercoaster%20%283%29.webp", "rollercoaster%20%284%29.webp", "rollercoaster%20%285%29.webp", "rollercoaster%20%286%29.webp", "rollercoaster%20%287%29.webp", "rollercoaster%20%288%29.webp", "rollercoaster%20%289%29.webp", "rollercoaster%20%2810%29.webp", "rollercoaster%20%2811%29.webp", "rollercoaster%20%2812%29.webp", "rollercoaster%20%2813%29.webp", "rollercoaster%20%2814%29.webp", "rollercoaster%20%2815%29.webp", "rollercoaster%20%2816%29.webp", "rollercoaster%20%2817%29.webp", "rollercoaster%20%2818%29.webp", "rollercoaster%20%2819%29.webp", "rollercoaster%20%2820%29.webp", "rollercoaster%20%2821%29.webp", "rollercoaster%20%2822%29.webp", "rollercoaster%20%2823%29.webp", "rollercoaster%20%2824%29.webp", "SPECTRUM%20%281%29.webp", "SPECTRUM%20%282%29.webp", "YELLOW.webp"]}, "eight": {"title": "Lighting", "images": ["WALL%20LIGHTING%20FIXTURE%20%281%29.webp", "WALL%20LIGHTING%20FIXTURE%20%284%29.webp", "WALL%20LIGHTING%20FIXTURE%20%285%29.webp", "WALL%20LIGHTING%20FIXTURE%20%286%29.webp", "WALL%20LIGHTING%20FIXTURE%20%287%29.webp", "WALL%20LIGHTING%20FIXTURE%20%288%29.webp", "WALL%20LIGHTING%20FIXTURE%20%289%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2810%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2811%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2812%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2813%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2814%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2815%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2816%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2817%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2818%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2819%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2820%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2821%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2822%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2823%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2824%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2825%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2826%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2827%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2828%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2829%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2830%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2831%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2832%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2833%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2834%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2835%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2836%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2837%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2838%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2839%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2840%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2841%29.webp", "WALL%20LIGHTING%20FIXTURE%20%2842%29.webp"]}, "nine": {"title": "Arci, Media, Ant & Hill Bun", "images": ["Collection%200/ant%201.jpg", "Collection%200/ant%202.jpg", "Collection%200/ant%203.jpg", "Collection%200/ant%204.jpg", "Collection%200/ant%205.jpg", "Collection%200/ant%206.jpg", "Collection%200/ant%207.jpg", "Collection%200/ant%208.jpg", "Collection%200/ant%209.jpg", "Collection%200/ant%2010.jpg", "Collection%200/ant.jpg", "Collection%200/arci%201.jpg", "Collection%200/arci%202.jpg", "Collection%200/arci%203.jpg", "Collection%200/arci%204.jpg", "Collection%200/arci%205.jpg", "Collection%200/arci.jpg", "Collection%200/hill%20bun%201.jpg", "Collection%200/hill%20bun%202.jpg", "Collection%200/hill%20bun%203.jpg", "Collection%200/hill%20bun%204.jpg", "Collection%200/hill%20bun%205.jpg", "Collection%200/hill%20bun%206.jpg", "Collection%200/hill%20bun%207.jpg", "Collection%200/hill%20bun%208.jpg", "Collection%200/hill%20bun.jpg", "Collection%200/media1.jpg", "Collection%200/media%202.jpg", "Collection%200/media%203.jpg", "Collection%200/media%204.jpg"]}};
+      Array.prototype.forEach.call(document.querySelectorAll('.yr'),function(e){e.textContent=new Date().getFullYear();});
+      var overlay=document.getElementById('overlay'),mo=document.getElementById('menuOpen'),mc=document.getElementById('menuClose');
+      function setMenu(o){overlay.classList.toggle('open',o);overlay.classList.toggle('closed',!o);document.body.style.overflow=o?'hidden':'';}
+      if(mo)mo.addEventListener('click',function(){setMenu(true);});
+      if(mc)mc.addEventListener('click',function(){setMenu(false);});
+      Array.prototype.forEach.call(document.querySelectorAll('.overlay-link'),function(l){l.addEventListener('click',function(){setMenu(false);});});
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -6% 0px'});
+      Array.prototype.forEach.call(document.querySelectorAll('.reveal'),function(el){io.observe(el);});
+      var lb=document.getElementById('lightbox');
+      if(lb&&Object.keys(GALLERIES).length){
+        var lbImg=document.getElementById('lbImg'),lbTitle=document.getElementById('lbTitle'),lbCount=document.getElementById('lbCount'),lbStrip=document.getElementById('lbStrip');
+        var cur=null,idx=0;
+        function render(){var g=GALLERIES[cur];if(!g)return;lbImg.style.opacity=0;var src=g.images[idx];var im=new Image();im.onload=function(){lbImg.src=src;lbImg.style.opacity=1;};im.src=src;lbTitle.textContent=g.title;lbCount.textContent=(idx+1)+' / '+g.images.length;Array.prototype.forEach.call(lbStrip.children,function(c,i){c.style.opacity=(i===idx)?'1':'0.4';});var act=lbStrip.children[idx];if(act&&act.scrollIntoView)act.scrollIntoView({inline:'center',block:'nearest'});}
+        function buildStrip(){var g=GALLERIES[cur];lbStrip.innerHTML='';if(g.images.length<2){lbStrip.style.display='none';return;}lbStrip.style.display='flex';g.images.forEach(function(src,i){var b=document.createElement('button');b.className='shrink-0 fade';b.style.opacity=(i===idx)?'1':'0.4';b.innerHTML='<img src="'+src+'" class="h-14 w-14 object-cover" alt="" />';b.addEventListener('click',function(){idx=i;render();});lbStrip.appendChild(b);});}
+        function open(k,i){cur=k;idx=i||0;buildStrip();render();lb.classList.add('open');lb.classList.remove('closed');document.body.style.overflow='hidden';}
+        function close(){lb.classList.remove('open');lb.classList.add('closed');document.body.style.overflow='';}
+        function next(){var g=GALLERIES[cur];idx=(idx+1)%g.images.length;render();}
+        function prev(){var g=GALLERIES[cur];idx=(idx-1+g.images.length)%g.images.length;render();}
+        document.getElementById('lbClose').addEventListener('click',close);
+        document.getElementById('lbNext').addEventListener('click',next);
+        document.getElementById('lbPrev').addEventListener('click',prev);
+        document.addEventListener('keydown',function(e){if(lb.classList.contains('open')){if(e.key==='Escape')close();else if(e.key==='ArrowRight')next();else if(e.key==='ArrowLeft')prev();}else if(e.key==='Escape')setMenu(false);});
+        Array.prototype.forEach.call(document.querySelectorAll('[data-gallery]'),function(el){var k=el.getAttribute('data-gallery'),di=parseInt(el.getAttribute('data-index')||'0',10);el.addEventListener('click',function(){open(k,di);});el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(k,di);}});});
+      } else {
+        document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+      }
+    })();
+  </script>
+</body>
+</html>
